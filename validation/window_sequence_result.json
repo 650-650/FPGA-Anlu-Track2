@@ -1,0 +1,37 @@
+{
+  "pass": true,
+  "transactions": 118,
+  "source_changes": [
+    "user_source/hdl_source/design_top_wrapper.v",
+    "user_source/hdl_source/display_contrast.v",
+    "user_source/hdl_source/image_curve_rom.v",
+    "user_source/hdl_source/uics500_cfg/uicfgcs500_720p.v",
+    "user_source/hdl_source/uics500_cfg/uics500reg_720p60.v"
+  ],
+  "original_unchanged": true,
+  "sensor_window": {
+    "old_y": [
+      256,
+      1703
+    ],
+    "new_y": [
+      192,
+      1639
+    ],
+    "height": 1448,
+    "shift_sensor_rows": 64,
+    "shift_output_rows": 32,
+    "output": [
+      1280,
+      720
+    ],
+    "bayer": "BGGR"
+  },
+  "handshake_stub": true,
+  "physical_i2c_sensor_or_video_simulated": false,
+  "scope": "Actual initialization FSM/table transaction sequence and preserved 240000-cycle post-stream delay.",
+  "dut_sha256": {
+    "user_source/hdl_source/uics500_cfg/uicfgcs500_720p.v": "d9ae2eaaaef8320a3cf7f6546b8359e3d742d5fe4774443782a4d46c6a056d01",
+    "user_source/hdl_source/uics500_cfg/uics500reg_720p60.v": "fe7519de38acdbf7afac3b36c51830583f3c2364d438741356264d5b0e318b4f"
+  }
+}

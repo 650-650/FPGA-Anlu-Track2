@@ -1,0 +1,36 @@
+{
+  "pass": true,
+  "packets": 369600,
+  "width": 1280,
+  "h_total": 1650,
+  "active_rows": 224,
+  "old_roi": [
+    672,
+    720,
+    144,
+    176
+  ],
+  "new_roi": [
+    672,
+    720,
+    176,
+    208
+  ],
+  "old_repairs": 3,
+  "new_repairs": 3,
+  "different_pixels": 6,
+  "overlay_sketch_and_outside_roi_preserved": true,
+  "complete_36bit_packet_checked": true,
+  "unchanged_display_algorithm": true,
+  "behavioral_line_ram": true,
+  "scope": "Partial-height production-width display stream; no physical camera, DDR or native ERAM simulation.",
+  "dut_sha256": {
+    "user_source/hdl_source/display_denoise_v11.v": "827a2e145417c6a3bc5be403c7d4568c6408eb4dbc801ea1ef98beec94add4ab",
+    "user_source/hdl_source/design_top_wrapper.v": "edbfc9e126803053e84f721d5b5da2e91e32c9529b99e7684cf7e06c608210cd"
+  },
+  "test_sha256": {
+    "tools/verify_v11_roi.py": "7dfa46d4a8d1e3ccd589e21e127f65f1f4ddad67cce6aab51bc7ea2405cfbeaf",
+    "validation/v11_roi/v11_roi_tb.v": "66cd71acacdec1b34870f0208346db15d2b6278c96abf7b8987dcfff5d59feea"
+  },
+  "seconds": 24.15
+}
