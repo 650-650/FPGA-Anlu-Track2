@@ -1,3 +1,9 @@
+## 换电脑或解压位置后，先准备工程路径
+
+双击根目录 `准备编译.cmd`，看到 `ROM paths and project references are ready` 后，关闭并重新打开 `td_project/camera_to_dsi_display.al`，再运行综合。脚本只把 ROM `.dat` 文件与工程根目录的绝对路径更新到当前解压位置；不会修改图像算法、时序约束或已导出的 bit。不要直接在刚解压的工程上点击综合，否则会因旧路径出现 `SYN-8142`。每次移动工程后重新运行一次。
+
+已经导出的 `output/*.bit` 可直接检查；若重新综合，旧构建日志和清单不代表新构建结果。
+
 # V16 五档风格与中文同帧延迟融合候选
 
 正式候选文件：`output/stylize_flame_fusion_v16_scene_levels_latency.bit`  

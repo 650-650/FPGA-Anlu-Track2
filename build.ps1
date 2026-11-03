@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop'
-$td = 'D:\anlu\TD_6.2.1_Engineer_6.2.168.116\bin\td_commands_prompt.exe'
-$python = 'C:\Users\Harry\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe'
-& $python (Join-Path $PSScriptRoot 'tools\prepare_project.py')
+$td = if ($env:TD_COMMANDS_PROMPT) { $env:TD_COMMANDS_PROMPT } else { (Get-Command td_commands_prompt.exe -ErrorAction SilentlyContinue).Source }
+if (-not $td -or -not (Test-Path -LiteralPath $td -PathType Leaf)) { throw 'Set TD_COMMANDS_PROMPT to the installed td_commands_prompt.exe path, or add it to PATH.' }
+& (Join-Path $PSScriptRoot '准备编译.ps1')
 if ($LASTEXITCODE -ne 0) { throw 'Project validation failed' }
 foreach ($run in @('syn_1', 'phy_1')) {
     $runDir = Join-Path $PSScriptRoot ('td_project\camera_to_dsi_display_Runs\' + $run)
