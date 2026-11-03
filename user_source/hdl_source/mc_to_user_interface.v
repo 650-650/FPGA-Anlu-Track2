@@ -45,23 +45,48 @@ module mc_to_user_interface (
 
     assign S_fifo_wr_data = {I_ddr_user_wr_en,I_ddr_user_rd_en,I_ddr_user_addr,I_ddr_user_wr_data};
 
-    assign S_fifo_rd_en = I_mc_app_rdy & I_mc_app_wdf_rdy & (~S_fifo_empty);
+    // Keep the show-ahead FIFO head until the controller accepts every
+    // channel belonging to it. AW and W may handshake on different clocks.
+    // A read uses AR only; write-data backpressure must not consume it.
+    reg cmd_accepted;
+    reg write_data_accepted;
+    wire S_head_write = S_fifo_rd_data[154];
+    wire S_cmd_handshake = O_mc_app_en && I_mc_app_rdy;
+    wire S_data_handshake = O_mc_app_wdf_wren && I_mc_app_wdf_rdy;
+    assign S_fifo_rd_en = !S_fifo_empty &&
+        (cmd_accepted || S_cmd_handshake) &&
+        (!S_head_write || write_data_accepted || S_data_handshake);
+
+    always @(posedge I_clk or negedge I_rst_n) begin
+        if(!I_rst_n) begin
+            cmd_accepted <= 1'b0;
+            write_data_accepted <= 1'b0;
+        end else if(S_fifo_rd_en || S_fifo_empty) begin
+            cmd_accepted <= 1'b0;
+            write_data_accepted <= 1'b0;
+        end else begin
+            if(S_cmd_handshake) cmd_accepted <= 1'b1;
+            if(S_data_handshake) write_data_accepted <= 1'b1;
+        end
+    end
 
     assign O_ddr_user_ready = ~S_fifio_pro_full;
 
-    assign O_mc_app_en = S_fifo_rd_en;
+    assign O_mc_app_en = I_rst_n && !S_fifo_empty && !cmd_accepted;
 
-    assign O_mc_app_addr = O_mc_app_en ? S_fifo_rd_data[152:128] : 'd0;
+    assign O_mc_app_addr = S_fifo_rd_data[152:128];
 
-    assign O_mc_app_cmd = O_mc_app_en && S_fifo_rd_data[153] ? 3'd1 : 3'd0;
+    // Payload and command type do not depend on ready or valid. In particular
+    // the wrapper can select ARREADY/AWREADY without a combinational loop.
+    assign O_mc_app_cmd = S_fifo_rd_data[153] ? 3'd1 : 3'd0;
 
-    assign O_mc_app_wdf_wren = O_mc_app_en & S_fifo_rd_data[154];
+    assign O_mc_app_wdf_wren = I_rst_n && !S_fifo_empty && S_head_write && !write_data_accepted;
 
     assign O_mc_app_wdf_end = O_mc_app_wdf_wren;
 
     assign O_mc_app_wdf_mask = 'd0;
 
-    assign O_mc_app_wdf_data = O_mc_app_wdf_wren ? S_fifo_rd_data[127:0] : 'd0;
+    assign O_mc_app_wdf_data = S_fifo_rd_data[127:0];
 
     assign O_ddr_user_rd_valid = I_mc_app_rd_data_valid;
     

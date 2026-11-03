@@ -13,10 +13,10 @@ for name in ['image_curve_rom.v','isp/stylize_v5_96.v','display_contrast.v']:
         target.write_text(after,encoding='utf-8',newline='\n')
 s=file.read_text(encoding='utf-8')
 s=re.sub(r'<Project Version="3" Minor="2" Path="[^"]+">',f'<Project Version="3" Minor="2" Path="{P.as_posix()}">',s, count=1)
-sources=['fusion_controls.v','fusion_flame_pipeline.v','fusion_hud.v','fusion_telemetry.v','fusion_menu_rom.v',
+sources=['fusion_controls.v','fusion_flame_pipeline.v','fusion_hud.v','fusion_telemetry.v','fusion_menu_rom.v','fusion_chinese_font_rom.v',
          'visual_flame_alarm.v','camera_frame_watchdog.v','alarm_board_io.v','wb_gain_control.v',
          'first_aid_detector.v','isp/edge_detect_96.v','image_curve_rom.v','scene_color_control.v','color_luma_preserve.v','display_contrast.v','signal_delay_compact.v','awb_line_memory.v',
-         'display_denoise_v8.v','isp/style_guide_v8.v','display_denoise_v9.v','display_cartoon_finish_v9.v','display_denoise_v11.v']
+         'display_denoise_v8.v','isp/style_guide_v8.v','display_denoise_v9.v','display_cartoon_finish_v9.v','display_denoise_v11.v','frame_latency_monitor.v']
 for i,name in enumerate(sources):
     path='../user_source/hdl_source/'+name
     if f'Path="{path}"' not in s:

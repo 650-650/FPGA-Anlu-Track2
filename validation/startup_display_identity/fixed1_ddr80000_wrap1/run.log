@@ -1,0 +1,3 @@
+STARTUP_RESULT ddr_reset=          0 initial_vs=          0 expect_fail=          0 candidates=          8 mismatches=          1 valid_cycles=      18845 source=    1 valid=0
+STARTUP_CASE_PASS
+D:\FPGA_Work\AnlogicCup2026\07_stylize_flame_fusion_v16_scene_levels_latency\validation\startup_display_identity\tb.sv:57: $finish called at 484058256 (1ps)

@@ -1,0 +1,2 @@
+V15_CONTROL_CYCLE_EQUIVALENCE_PASS checks=77726
+D:\FPGA_Work\AnlogicCup2026\07_stylize_flame_fusion_v16_scene_levels_latency\validation\controls_levels\compare_tb.sv:22: $finish called at 1554520000 (1ps)

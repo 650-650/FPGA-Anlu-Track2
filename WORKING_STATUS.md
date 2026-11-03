@@ -1,0 +1,1 @@
+V16 软件验证、构建和严格导出完成：stylize_flame_fusion_v16_scene_levels_latency.bit；SHA256 f6e639bbfe9f80bec7fa02aa2ff1010fc8087e467924f3ab9877db82d30e9b6b。本候选尚未烧录、尚未实板观察。请先用 PROGRAM_SRAM 验收画质、延迟、启动与长期运行。详见 README_先读我.md 和 output/build_manifest.json。

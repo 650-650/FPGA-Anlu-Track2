@@ -1,0 +1,13 @@
+{
+  "pass": true,
+  "scope": "All binary per-channel output values; gamut prefix and register/control logic byte-exact",
+  "checks": 1048576,
+  "candidate_sha256": "9cd255e36f5625e611510695fa783e1cc9e78c00f348cde977534222ac04d7c4",
+  "source_sha256": "811810da14ab2e86fe921feb5a2801b4c082a95c9de7cf147d20c68a9d4d892a",
+  "testbench_sha256": "b7fa00ea8043cd66194e1e66b74fa79c55a1ddfa48ad7982616faf49cdae97b9",
+  "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "run_log_sha256": "62255d2938199b87bd443d1441ac8ef4f7ceb106f5f1d25553bfcf42c2a2c065",
+  "full_style_pixel_simulation_run": false,
+  "TD_run_by_math_verifier": false,
+  "production_modified": false
+}

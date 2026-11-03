@@ -1,0 +1,1 @@
+本目录保留隔离候选的1048576项二值算术穷举原始证据；未声称在复制时重新仿真。candidate_sha256与当前生产样式文件一致，source_sha256对应validation/pre_cartoon_output_epoch/old_stylize_v5_96.v。逐项测试c=0..255、level=0..7、edge=0/1、mag=0..255，比较描边输出尾部恒等式。全风格、帧同步和1280行宽的生产源码仿真另见validation/scene_pixel_equivalence；正式导出由严格门禁审核。

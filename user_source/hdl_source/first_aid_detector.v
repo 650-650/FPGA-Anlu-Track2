@@ -12,7 +12,7 @@ module first_aid_detector #(
  wire [7:0] minimum=r<g?(r<b?r:b):(g<b?g:b);
  wire [8:0] margin=g[7:4]>8?{5'd0,g[7:4]}:9'd8;
  wire green=g>=32 && {1'b0,g}>={1'b0,r}+margin && {1'b0,g}>={1'b0,b}+margin &&
-     {1'b0,g}-{1'b0,minimum}>={4'd0,g[7:3]};
+     ({1'b0,g}>={1'b0,r}+{4'd0,g[7:3]} || {1'b0,g}>={1'b0,b}+{4'd0,g[7:3]});
  wire white=!green && minimum>=112 && maximum>=144 && maximum-minimum<=40;
  reg [11:0] run_start,run_len;
  wire run_end=de && run_len!=0 && (!green || x==FRAME_WIDTH-1);

@@ -1,6 +1,6 @@
 
 
-module video_in (
+module video_in #(parameter integer INPUT_ALIGN_CYCLES=0)(
     input wire         I_rst_n,
 
     input wire         I_camera_clk,
@@ -19,9 +19,39 @@ module video_in (
     output reg         O_ddr_user_wr_en,
     output reg[24:0]   O_ddr_user_addr,
     output wire[127:0] O_ddr_user_wr_data,
-    input wire         I_ddr_user_ready
+    input wire         I_ddr_user_ready,
+    output wire O_observe_frame_start,
+    output wire [1:0] O_observe_write_slot,
+    output wire O_observe_overflow
 );
 
+    // The complete production ISP gives packed SOF a 55-camera-clock lead.
+    // Keep the accepted window version's direct FIFO input (default 0).
+    // The optional delay is retained only for controlled test fixtures whose
+    // artificial SOF lacks that lead; it is absent from the production netlist.
+    wire [127:0] aligned_camera_data;
+    wire aligned_camera_valid;
+    generate if(INPUT_ALIGN_CYCLES>0)begin: input_alignment
+        reg [127:0] data_pipe[0:INPUT_ALIGN_CYCLES-1];
+        reg [INPUT_ALIGN_CYCLES-1:0] valid_pipe;
+        integer n;
+        always @(posedge I_camera_clk)begin
+            data_pipe[0]<=I_camera_data;
+            for(n=1;n<INPUT_ALIGN_CYCLES;n=n+1)data_pipe[n]<=data_pipe[n-1];
+        end
+        always @(posedge I_camera_clk or negedge I_rst_n)
+            if(!I_rst_n)valid_pipe<=0;
+            else valid_pipe<=(valid_pipe<<1) | {{(INPUT_ALIGN_CYCLES-1){1'b0}},I_camera_valid};
+        assign aligned_camera_data=data_pipe[INPUT_ALIGN_CYCLES-1];
+        assign aligned_camera_valid=valid_pipe[INPUT_ALIGN_CYCLES-1];
+    end else begin: original_input
+        assign aligned_camera_data=I_camera_data;
+        assign aligned_camera_valid=I_camera_valid;
+    end endgenerate
+    wire S_input_fifo_full;
+    assign O_observe_frame_start=S_frame_start;
+    assign O_observe_write_slot=S_video_in_wp;
+    assign O_observe_overflow=aligned_camera_valid && S_input_fifo_full;
     wire        S_fifo_rst;
     reg         S_camera_frame_start_extend; ///脉冲展宽，同步到ddr_clk时钟域
     reg[3:0]    S_extend_cnt;
@@ -56,10 +86,10 @@ module video_in (
         .rst        ( S_fifo_rst         ),   
 
         .clkw       ( I_camera_clk       ),     
-        .we         ( I_camera_valid     ),
-        .di         ( I_camera_data      ),
+        .we         ( aligned_camera_valid ),
+        .di         ( aligned_camera_data  ),
         .afull      (),
-        .full_flag  (),
+        .full_flag  (S_input_fifo_full),
         .wrusedw    (),
  
         .clkr       ( I_ddr_clk          ),

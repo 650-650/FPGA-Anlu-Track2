@@ -1,0 +1,65 @@
+WARNING: Unexpected placement detected in PLB grids:
+  x32y47bank0:
+    CLK: u_isp_top/u_demosaic/raw_matrix_3x3_buffer_d/zhenghe_d/blk_mem_gen_zhenghe_d1/ram_d32970204f32_Inst/clkb, MUX: SIG, GSR: true
+    SSR: nullptr, MUX: 0
+    ASR: nullptr, MUX: 0
+    CEA: u_isp_top/u_stylize/u_win_b/pre_v, MUX: SIG, with 1 inst
+    NUM_CEB_GROUPS: 2
+    CEB(0): u_isp_top/u_stylize/b2_v, MUX: SIG, with 1 inst
+    CEB(1): u_isp_top/u_stylize/u_win_b/pre_v, MUX: SIG, with 1 inst
+  x32y50bank0:
+    CLK: u_isp_top/u_demosaic/raw_matrix_3x3_buffer_d/zhenghe_d/blk_mem_gen_zhenghe_d1/ram_d32970204f32_Inst/clkb, MUX: SIG, GSR: true
+    SSR: nullptr, MUX: 0
+    ASR: nullptr, MUX: 0
+    CEA: u_isp_top/u_stylize/u_win_b/pre_v, MUX: SIG, with 1 inst
+    NUM_CEB_GROUPS: 2
+    CEB(0): u_isp_top/u_stylize/b2_v, MUX: SIG, with 1 inst
+    CEB(1): u_isp_top/u_stylize/u_win_b/pre_v, MUX: SIG, with 1 inst
+  x33y45bank0:
+    CLK: u_isp_top/u_demosaic/raw_matrix_3x3_buffer_d/zhenghe_d/blk_mem_gen_zhenghe_d1/ram_d32970204f32_Inst/clkb, MUX: SIG, GSR: true
+    SSR: nullptr, MUX: 0
+    ASR: nullptr, MUX: 0
+    CEA: u_isp_top/u_stylize/u_win_b/pre_v, MUX: SIG, with 2 insts
+    NUM_CEB_GROUPS: 2
+    CEB(0): u_isp_top/u_stylize/b2_v, MUX: SIG, with 1 inst
+    CEB(1): u_isp_top/u_stylize/u_win_b/pre_v, MUX: SIG, with 2 insts
+  x36y50bank1:
+    CLK: u_isp_top/u_demosaic/raw_matrix_3x3_buffer_d/zhenghe_d/blk_mem_gen_zhenghe_d1/ram_d32970204f32_Inst/clkb, MUX: SIG, GSR: true
+    SSR: nullptr, MUX: 0
+    ASR: nullptr, MUX: 0
+    CEA: u_isp_top/u_stylize/u_win_b/pre_v, MUX: SIG, with 2 insts
+    NUM_CEB_GROUPS: 2
+    CEB(0): u_isp_top/u_stylize/b2_v, MUX: SIG, with 1 inst
+    CEB(1): u_isp_top/u_stylize/u_win_b/pre_v, MUX: SIG, with 2 insts
+  x39y46bank1:
+    CLK: u_isp_top/u_demosaic/raw_matrix_3x3_buffer_d/zhenghe_d/blk_mem_gen_zhenghe_d1/ram_d32970204f32_Inst/clkb, MUX: SIG, GSR: true
+    SSR: nullptr, MUX: 0
+    ASR: nullptr, MUX: 0
+    CEA: u_isp_top/u_stylize/u_win_b/pre_v, MUX: SIG, with 3 insts
+    NUM_CEB_GROUPS: 2
+    CEB(0): u_isp_top/u_stylize/b2_v, MUX: SIG, with 1 inst
+    CEB(1): u_isp_top/u_stylize/u_win_b/pre_v, MUX: SIG, with 3 insts
+  x39y49bank1:
+    CLK: u_isp_top/u_demosaic/raw_matrix_3x3_buffer_d/zhenghe_d/blk_mem_gen_zhenghe_d1/ram_d32970204f32_Inst/clkb, MUX: SIG, GSR: true
+    SSR: nullptr, MUX: 0
+    ASR: nullptr, MUX: 0
+    CEA: u_isp_top/u_stylize/u_win_b/pre_v, MUX: SIG, with 3 insts
+    NUM_CEB_GROUPS: 2
+    CEB(0): u_isp_top/u_stylize/b2_v, MUX: SIG, with 1 inst
+    CEB(1): u_isp_top/u_stylize/u_win_b/pre_v, MUX: SIG, with 3 insts
+  x40y50bank0:
+    CLK: u_isp_top/u_demosaic/raw_matrix_3x3_buffer_d/zhenghe_d/blk_mem_gen_zhenghe_d1/ram_d32970204f32_Inst/clkb, MUX: SIG, GSR: true
+    SSR: nullptr, MUX: 0
+    ASR: nullptr, MUX: 0
+    CEA: u_isp_top/u_stylize/u_win_b/pre_v, MUX: SIG, with 1 inst
+    NUM_CEB_GROUPS: 2
+    CEB(0): u_isp_top/u_stylize/b2_v, MUX: SIG, with 1 inst
+    CEB(1): u_isp_top/u_stylize/u_win_b/pre_v, MUX: SIG, with 1 inst
+  x40y51bank1:
+    CLK: u_isp_top/u_demosaic/raw_matrix_3x3_buffer_d/zhenghe_d/blk_mem_gen_zhenghe_d1/ram_d32970204f32_Inst/clkb, MUX: SIG, GSR: true
+    SSR: nullptr, MUX: 0
+    ASR: nullptr, MUX: 0
+    CEA: u_isp_top/u_stylize/u_win_b/pre_v, MUX: SIG, with 2 insts
+    NUM_CEB_GROUPS: 2
+    CEB(0): u_isp_top/u_stylize/b2_v, MUX: SIG, with 1 inst
+    CEB(1): u_isp_top/u_stylize/u_win_b/pre_v, MUX: SIG, with 2 insts

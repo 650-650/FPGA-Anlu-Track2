@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "evidence": "production RTL simulation and pixel comparison; not a board capture",
+  "page_cases": 71,
+  "compared_pixels": 16358400,
+  "control_switch_probes": 4096,
+  "pipeline": "menu + font, two synchronous rising-edge reads; output matches the prior sampled coordinate",
+  "cjk_glyphs": 163,
+  "max_static_id": 194,
+  "menu_bits": 36864,
+  "font_bits": 65536,
+  "eram_target_estimate": 6,
+  "elapsed_seconds": 91.94,
+  "sources": {
+    "user_source\\hdl_source\\fusion_hud.v": "b42e0579f00dfe61ea1d92be89c892a007a8e08a6086c0c7dfa25462c0d49ec6",
+    "user_source\\hdl_source\\fusion_menu_rom.v": "2e84717029793cfbd2a73c30fa26aa99ff3180065e433fa6149b40ca300f10df",
+    "user_source\\hdl_source\\fusion_chinese_font_rom.v": "09d040248f979b6885de89c5a52715b49b47e27a82ffff6e3b4aa879455ef59b",
+    "tools\\verify_chinese_hud.py": "8000166d194c95035868ce8a98690c68ec116275e247962f85c41857444b2aa0",
+    "tools\\chinese_assets\\menu_zh.json": "4840cd57aa36cd92726094c3c1743c3ac495e63f16b995c6acf73dac0c5886b5",
+    "tools\\chinese_assets\\build_chinese_assets.py": "730905d547fb287cda1a9b67222d0aafedaa18e30b973fe97d03f42e0d926a07"
+  },
+  "style_level_cases": 20,
+  "style_levels_packing": "{edge,sketch,cartoon,clear}, internal 0..4 displayed 1..5",
+  "checks": [
+    "all active pages and reserved/invalid pages",
+    "all green-white-cross directions and missing target",
+    "neutral/cool/warm/magenta/green and signed temperature endpoints",
+    "candidate/alarm/audio/config/DDR/source/color-ready/armed/debug flags",
+    "latency valid and invalid, zero, hexadecimal frame and diagnostic values",
+    "all menu pixels, visible boundaries, row gaps, and two-stage coordinate alignment",
+    "all four SW1 modes at each of five levels with unequal remembered values",
+    "control/panel/packed-level changes on consecutive pixels"
+  ],
+  "limitations": [
+    "no new TD synthesis/placement/timing evidence in this test",
+    "no camera image quality or detection behavior changed or accepted by this test",
+    "no board Chinese glyph readability or final latency core verification in this test"
+  ]
+}

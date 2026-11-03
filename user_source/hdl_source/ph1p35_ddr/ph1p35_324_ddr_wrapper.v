@@ -71,8 +71,9 @@ module ph1p35_324_ddr_wrapper (
     assign paxi_rready              = 1'b1                                      ;
     assign O_mc_app_rd_data        = paxi_rdata                                 ; 
     assign O_mc_app_rd_data_valid  = paxi_rvalid                                ;
-    assign O_mc_app_rdy            = paxi_arready || paxi_awready               ;
-    assign O_mc_app_wdf_rdy        = paxi_awready                               ;
+    assign O_mc_app_rd_data_end    = paxi_rlast                                 ;
+    assign O_mc_app_rdy            = I_mc_app_cmd[0] ? paxi_arready : paxi_awready;
+    assign O_mc_app_wdf_rdy        = paxi_wready                                ;
 
 
     ddr2 u_ddr2 (

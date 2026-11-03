@@ -1,0 +1,2 @@
+CONTROLS_PARAMS_PASS checks=58
+D:\FPGA_Work\AnlogicCup2026\07_stylize_flame_fusion_v16_scene_levels_latency\validation\controls_levels\teammate_controls_params_tb.sv:65: $finish called at 14380000 (1ps)

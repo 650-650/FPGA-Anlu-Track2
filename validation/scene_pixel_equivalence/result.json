@@ -1,0 +1,43 @@
+{
+  "pass": true,
+  "created": "2026-11-03T10:15:43.690566+08:00",
+  "checks": {
+    "SCENE_STYLE_EQUIVALENCE_PASS": 923241,
+    "SCENE_DISPLAY_EQUIVALENCE_PASS": 26068,
+    "SCENE_STYLE_PRODUCTION_WIDTH_PASS": 326208
+  },
+  "logs": {
+    "scene_pixels_modelsim.log": {
+      "sha256": "27a7aa2b42f74f52ae1e934393bd06a6445ab4b26f1d0abe5bf9e415b9a1d437",
+      "compile_errors": 0,
+      "compile_warnings": 0,
+      "runtime_warning_count": 60,
+      "runtime_warning_note": "Inherited unconnected passive pre_* outputs on first/second style windows, also present in the V15 reference"
+    },
+    "scene_production_width_modelsim.log": {
+      "sha256": "853117fe7c20ee614c5c0eb598f301798a67b1598ff318fe79ed877ac5259d18",
+      "compile_errors": 0,
+      "compile_warnings": 0,
+      "runtime_warning_count": 60,
+      "runtime_warning_note": "Inherited unconnected passive pre_* outputs on first/second style windows, also present in the V15 reference"
+    }
+  },
+  "production_sha256": {
+    "user_source/hdl_source/isp/isp_top.v": "653053dc53407cd9be226dc8b0a242f242b8a1887fea4dbdc094b3120e4ed034",
+    "user_source/hdl_source/isp/stylize_v5_96.v": "9cd255e36f5625e611510695fa783e1cc9e78c00f348cde977534222ac04d7c4",
+    "user_source/hdl_source/isp/style_guide_v8.v": "04fe445a64701487d964176af439c8bcb51f2b115b9de5d45fa32585087fb5db",
+    "user_source/hdl_source/display_contrast.v": "72a4ade832f582062dd7aaf58afa55ea7bbdc1cf6ba67a08b9011fef047621ab",
+    "user_source/hdl_source/display_tone.dat": "1a0b66199b2a41ab137efbc1a9af1e0c649c27ef85b5bdce83968edc3715f4f5"
+  },
+  "source_binding_sha256": "ec66a56204d24d8aff2edd8263dd7a6796b939356436c54bf314b8289cbcf634",
+  "coverage": {
+    "small_frames": "128x48, 6 synthetic scenes, 4 styles, 5 levels, 2 frames each",
+    "production_line_width": "1280x12, grey ramp, 4 styles, 5 levels, 2 frames each",
+    "display": "256 grey codes, 9x9x9 RGB samples, overlay/bypass/cartoon protection",
+    "equivalence": "Exact cycle: all levels equal teammate; middle level equals unchanged V15; valid/SOF/EOL preserved; frame level lock"
+  },
+  "boundaries": [
+    "Directed RTL pixel tests, not MIPI/DDR/HDMI full-system tests",
+    "No TD build, timing closure, programming or board observations performed by this runner"
+  ]
+}

@@ -1,0 +1,6 @@
+D:\FPGA_Work\AnlogicCup2026\07_stylize_flame_fusion_v15_ddr_latency_final\user_source\hdl_source\fusion_hud.v:2: warning: timescale for fusion_hud inherited from another file.
+D:\FPGA_Work\AnlogicCup2026\07_stylize_flame_fusion_v16_scene_levels_latency\validation\v16_hud_preservation\baseline_sim\v15_hud_tb.v:1: ...: The inherited timescale is here.
+D:\FPGA_Work\AnlogicCup2026\07_stylize_flame_fusion_v15_ddr_latency_final\user_source\hdl_source\fusion_menu_rom.v:1: warning: timescale for fusion_menu_rom inherited from another file.
+D:\FPGA_Work\AnlogicCup2026\07_stylize_flame_fusion_v16_scene_levels_latency\validation\v16_hud_preservation\baseline_sim\v15_hud_tb.v:1: ...: The inherited timescale is here.
+D:\FPGA_Work\AnlogicCup2026\07_stylize_flame_fusion_v15_ddr_latency_final\user_source\hdl_source\fusion_chinese_font_rom.v:1: warning: timescale for fusion_chinese_font_rom inherited from another file.
+D:\FPGA_Work\AnlogicCup2026\07_stylize_flame_fusion_v16_scene_levels_latency\validation\v16_hud_preservation\baseline_sim\v15_hud_tb.v:1: ...: The inherited timescale is here.

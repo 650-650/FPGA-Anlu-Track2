@@ -14,7 +14,8 @@ module fusion_controls #(
     output wire [7:0] O_control,
     output wire O_osd_enable,
     output reg O_wb_toggle=0,
-    output wire [5:0] O_color_control
+    output wire [5:0] O_color_control,
+    output wire [11:0] O_style_levels
 );
     localparam integer DB=$clog2(DEBOUNCE_CYCLES+1);
     localparam integer PB=$clog2(BOOT_CYCLES+1);
@@ -35,6 +36,12 @@ module fusion_controls #(
     reg [1:0] page=0;
     reg muted=0,details=0,help=0;
     reg signed [3:0] temperature=0;reg [1:0] tint=0;
+    reg [2:0] clear_level=2,cartoon_level=2,sketch_level=2,edge_level=2;
+    assign O_style_levels={edge_level,sketch_level,cartoon_level,clear_level};
+    function [2:0] next_level;
+        input [2:0] level;
+        begin next_level=level>=4?0:level+1'b1;end
+    endfunction
     assign O_color_control={temperature,tint};
     wire [2:0] selected_group;
     wire boot_done=boot_count==BOOT_CYCLES;
@@ -79,13 +86,19 @@ module fusion_controls #(
             muted<=0;details<=0;help<=0;
             // The receiving synchronizer resets with the PLL. Clear its event
             // source during that reset to prevent a stale toggle relearning WB.
-            if(!O_system_rst_n)begin O_wb_toggle<=0;temperature<=0;tint<=0;end
+            if(!O_system_rst_n)begin
+                O_wb_toggle<=0;temperature<=0;tint<=0;
+                clear_level<=2;cartoon_level<=2;sketch_level<=2;edge_level<=2;
+            end
         end else if(released[0]) begin
             page<=0;
+            if(group_id==1 && page==0)clear_level<=next_level(clear_level);
             if(group_id==0)begin temperature<=0;tint<=0;O_wb_toggle<=~O_wb_toggle;end
         end else if(released[1]) begin
+            if(group_id==1 && page==1)cartoon_level<=next_level(cartoon_level);
             if(group_id==0)begin if(temperature>-4)temperature<=temperature-1'b1;end else page<=1;
         end else if(released[2] && !k3_sent) begin
+            if(group_id==1 && page==2)sketch_level<=next_level(sketch_level);
             if(group_id==0)begin if(temperature<4)temperature<=temperature+1'b1;end
             else if(group_id==2)begin
                 if(page==2)muted<=~muted;
@@ -94,7 +107,7 @@ module fusion_controls #(
         end else if(released[3] && !k4_sent) begin
             case(group_id)
                 0:tint<=tint==2?0:tint+1'b1;
-                1:page<=3;
+                1:begin page<=3;if(page==3)edge_level<=next_level(edge_level);end
                 2:begin page<=3;muted<=0;end
                 3:page<=3;
                 default:begin end

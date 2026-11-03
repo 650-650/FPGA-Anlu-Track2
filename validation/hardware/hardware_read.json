@@ -1,0 +1,10 @@
+{
+  "source": "D:\\FPGA\\安路杯FPGA2026\\02_板卡与芯片资料\\PH1P35与HX1P35A\\HX1P35A_Contest_202606\\9_康芯开发板使用手册及实验平台\\新HX1P35A开发板手册-HDL版2604.pdf",
+  "source_sha256": "7b7a65b0212db35cb89a5dff6e80ae6cedf4ef697c0e61e20829c0dc801468d4",
+  "key_pages_1_based": [
+    22,
+    23
+  ],
+  "pins": "KEY1 D5, KEY2 A9, KEY3 B9, KEY4 C7; SW1 A4, SW2 B4, SW3 E11, SW4 D11 verified against existing pin.adc.",
+  "scope": "Read-only local board guide; board pin direction/electrical polarity retained from accepted V15 controls."
+}

@@ -1,0 +1,456 @@
+{
+  "schema": 1,
+  "created_utc": "2026-11-02T14:23:59.167873+00:00",
+  "root": "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency",
+  "allowed_changed_source": "user_source/hdl_source/isp/stylize_v5_96.v",
+  "cases": {
+    "paxi_720p": {
+      "compile_command": [
+        "D:\\anlu\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-DPAXI_VIDEO_LINES=720",
+        "-s",
+        "latency_video_tb",
+        "-Platency_video_tb.FULL=1",
+        "-Platency_video_tb.STYLE=0",
+        "-Platency_video_tb.LEAD=55",
+        "-Platency_video_tb.ALIGN=0",
+        "-Platency_video_tb.LINES=720",
+        "-o",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\validation\\paxi_720p\\sim.vvp",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\validation\\paxi_720p\\tb.sv",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\isp\\stylize_v5_96.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\isp\\style_guide_v8.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\data_96bit_to_128bit.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\video_in.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\video_out.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\mc_to_user_interface.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\fusion_controls.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\frame_latency_monitor.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\ip_source\\w128_d512_fifo\\w128_d512_fifo.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\ip_source\\w128_d512_fifo\\soft_fifo_al_4057d6b76aa6.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\ip_source\\w155_d512_fifo\\w155_d512_fifo.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\ip_source\\w155_d512_fifo\\soft_fifo_al_f58e8b3e1f3d.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\vtc\\uivtc.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\ph1p35_ddr\\ph1p35_324_ddr_wrapper.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\tools\\ddr2_video_protocol_stub.sv"
+      ],
+      "output_argument_index": 11,
+      "compiled_inputs": [
+        "validation/paxi_720p/tb.sv",
+        "user_source/hdl_source/isp/stylize_v5_96.v",
+        "user_source/hdl_source/isp/style_guide_v8.v",
+        "user_source/hdl_source/data_96bit_to_128bit.v",
+        "user_source/hdl_source/video_in.v",
+        "user_source/hdl_source/video_out.v",
+        "user_source/hdl_source/mc_to_user_interface.v",
+        "user_source/hdl_source/fusion_controls.v",
+        "user_source/hdl_source/frame_latency_monitor.v",
+        "user_source/ip_source/w128_d512_fifo/w128_d512_fifo.v",
+        "user_source/ip_source/w128_d512_fifo/soft_fifo_al_4057d6b76aa6.v",
+        "user_source/ip_source/w155_d512_fifo/w155_d512_fifo.v",
+        "user_source/ip_source/w155_d512_fifo/soft_fifo_al_f58e8b3e1f3d.v",
+        "user_source/hdl_source/vtc/uivtc.v",
+        "user_source/hdl_source/ph1p35_ddr/ph1p35_324_ddr_wrapper.v",
+        "tools/ddr2_video_protocol_stub.sv"
+      ],
+      "artifacts": {
+        "result.json": {
+          "original_path": "validation/paxi_720p/result.json",
+          "snapshot_path": "cases/paxi_720p/result.json",
+          "sha256": "77f9811cc2f6f56cd37e3e487952c0d2eaab40e2bdd47d022a8ea5d0108c3643"
+        },
+        "started.json": {
+          "original_path": "validation/paxi_720p/started.json",
+          "snapshot_path": "cases/paxi_720p/started.json",
+          "sha256": "f096b2be03f7eba120dd8d42c33067848d2d3243398ee8512829a72dcfabafb9"
+        },
+        "compile.log": {
+          "original_path": "validation/paxi_720p/compile.log",
+          "snapshot_path": "cases/paxi_720p/compile.log",
+          "sha256": "1f1a1f7352bdc90798d29837f309bcaf305e9d7ade7d45d570cd5d34b96a6e81"
+        },
+        "run.log": {
+          "original_path": "validation/paxi_720p/run.log",
+          "snapshot_path": "cases/paxi_720p/run.log",
+          "sha256": "b587894df60bc82868920a1d449e30fdbd42220d123ee513e38205a2e0840265"
+        },
+        "tb.sv": {
+          "original_path": "validation/paxi_720p/tb.sv",
+          "snapshot_path": "cases/paxi_720p/tb.sv",
+          "sha256": "0a73e065d9f96e98f161fb6b02cabd91ebfc0af5220d22c0d282346c041edc80"
+        },
+        "sim.vvp": {
+          "original_path": "validation/paxi_720p/sim.vvp",
+          "snapshot_path": "cases/paxi_720p/sim.vvp",
+          "sha256": "4cb1e08da5d166cb5fa016401d69f6c78e5655a894be81b8a269ba84ecc6cc52"
+        }
+      },
+      "elaboration": {
+        "module_scope_count": 24,
+        "style_module_scopes": [],
+        "FULL": 1,
+        "STYLE": 0
+      },
+      "old_result_passed": true
+    },
+    "paxi_8p_strong_stall": {
+      "compile_command": [
+        "D:\\anlu\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-DPAXI_VIDEO_LINES=8",
+        "-s",
+        "latency_video_tb",
+        "-Platency_video_tb.FULL=1",
+        "-Platency_video_tb.STYLE=0",
+        "-Platency_video_tb.LEAD=55",
+        "-Platency_video_tb.ALIGN=0",
+        "-Platency_video_tb.LINES=8",
+        "-o",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\validation\\paxi_8p_strong_stall\\sim.vvp",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\validation\\paxi_8p_strong_stall\\tb.sv",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\isp\\stylize_v5_96.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\isp\\style_guide_v8.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\data_96bit_to_128bit.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\video_in.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\video_out.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\mc_to_user_interface.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\fusion_controls.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\frame_latency_monitor.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\ip_source\\w128_d512_fifo\\w128_d512_fifo.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\ip_source\\w128_d512_fifo\\soft_fifo_al_4057d6b76aa6.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\ip_source\\w155_d512_fifo\\w155_d512_fifo.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\ip_source\\w155_d512_fifo\\soft_fifo_al_f58e8b3e1f3d.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\vtc\\uivtc.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\ph1p35_ddr\\ph1p35_324_ddr_wrapper.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\tools\\ddr2_video_protocol_stub.sv"
+      ],
+      "output_argument_index": 11,
+      "compiled_inputs": [
+        "validation/paxi_8p_strong_stall/tb.sv",
+        "user_source/hdl_source/isp/stylize_v5_96.v",
+        "user_source/hdl_source/isp/style_guide_v8.v",
+        "user_source/hdl_source/data_96bit_to_128bit.v",
+        "user_source/hdl_source/video_in.v",
+        "user_source/hdl_source/video_out.v",
+        "user_source/hdl_source/mc_to_user_interface.v",
+        "user_source/hdl_source/fusion_controls.v",
+        "user_source/hdl_source/frame_latency_monitor.v",
+        "user_source/ip_source/w128_d512_fifo/w128_d512_fifo.v",
+        "user_source/ip_source/w128_d512_fifo/soft_fifo_al_4057d6b76aa6.v",
+        "user_source/ip_source/w155_d512_fifo/w155_d512_fifo.v",
+        "user_source/ip_source/w155_d512_fifo/soft_fifo_al_f58e8b3e1f3d.v",
+        "user_source/hdl_source/vtc/uivtc.v",
+        "user_source/hdl_source/ph1p35_ddr/ph1p35_324_ddr_wrapper.v",
+        "tools/ddr2_video_protocol_stub.sv"
+      ],
+      "artifacts": {
+        "result.json": {
+          "original_path": "validation/paxi_8p_strong_stall/result.json",
+          "snapshot_path": "cases/paxi_8p_strong_stall/result.json",
+          "sha256": "1c13991933e9c54659a4b6ac71e739b3bf3e97a0c5cd8397dbb315c150051af7"
+        },
+        "started.json": {
+          "original_path": "validation/paxi_8p_strong_stall/started.json",
+          "snapshot_path": "cases/paxi_8p_strong_stall/started.json",
+          "sha256": "537bac2be8b4d9e6fab4c5eef81634c407b5acbea56f4571730a4f9ea18f62a3"
+        },
+        "compile.log": {
+          "original_path": "validation/paxi_8p_strong_stall/compile.log",
+          "snapshot_path": "cases/paxi_8p_strong_stall/compile.log",
+          "sha256": "1f1a1f7352bdc90798d29837f309bcaf305e9d7ade7d45d570cd5d34b96a6e81"
+        },
+        "run.log": {
+          "original_path": "validation/paxi_8p_strong_stall/run.log",
+          "snapshot_path": "cases/paxi_8p_strong_stall/run.log",
+          "sha256": "002edf281da7c81aabfece97ee99749fd4dfea80f6f12eb063b70405e38274b0"
+        },
+        "tb.sv": {
+          "original_path": "validation/paxi_8p_strong_stall/tb.sv",
+          "snapshot_path": "cases/paxi_8p_strong_stall/tb.sv",
+          "sha256": "ac163637895b90b044c5a1e92c16bd213322098500f5a844a75810f4847dd60e"
+        },
+        "sim.vvp": {
+          "original_path": "validation/paxi_8p_strong_stall/sim.vvp",
+          "snapshot_path": "cases/paxi_8p_strong_stall/sim.vvp",
+          "sha256": "dc5f0e3cdca781a2bdb49ef67a18b60e621d4142ce7bd8773515977629af9a81"
+        }
+      },
+      "elaboration": {
+        "module_scope_count": 24,
+        "style_module_scopes": [],
+        "FULL": 1,
+        "STYLE": 0
+      },
+      "old_result_passed": true
+    },
+    "paxi_8p_late_return": {
+      "compile_command": [
+        "D:\\anlu\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-DPAXI_VIDEO_LINES=8",
+        "-s",
+        "latency_video_tb",
+        "-Platency_video_tb.FULL=1",
+        "-Platency_video_tb.STYLE=0",
+        "-Platency_video_tb.LEAD=55",
+        "-Platency_video_tb.ALIGN=0",
+        "-Platency_video_tb.LINES=8",
+        "-o",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\validation\\paxi_8p_late_return\\sim.vvp",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\validation\\paxi_8p_late_return\\tb.sv",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\isp\\stylize_v5_96.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\isp\\style_guide_v8.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\data_96bit_to_128bit.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\video_in.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\video_out.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\mc_to_user_interface.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\fusion_controls.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\frame_latency_monitor.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\ip_source\\w128_d512_fifo\\w128_d512_fifo.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\ip_source\\w128_d512_fifo\\soft_fifo_al_4057d6b76aa6.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\ip_source\\w155_d512_fifo\\w155_d512_fifo.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\ip_source\\w155_d512_fifo\\soft_fifo_al_f58e8b3e1f3d.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\vtc\\uivtc.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\ph1p35_ddr\\ph1p35_324_ddr_wrapper.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\tools\\ddr2_video_protocol_stub.sv"
+      ],
+      "output_argument_index": 11,
+      "compiled_inputs": [
+        "validation/paxi_8p_late_return/tb.sv",
+        "user_source/hdl_source/isp/stylize_v5_96.v",
+        "user_source/hdl_source/isp/style_guide_v8.v",
+        "user_source/hdl_source/data_96bit_to_128bit.v",
+        "user_source/hdl_source/video_in.v",
+        "user_source/hdl_source/video_out.v",
+        "user_source/hdl_source/mc_to_user_interface.v",
+        "user_source/hdl_source/fusion_controls.v",
+        "user_source/hdl_source/frame_latency_monitor.v",
+        "user_source/ip_source/w128_d512_fifo/w128_d512_fifo.v",
+        "user_source/ip_source/w128_d512_fifo/soft_fifo_al_4057d6b76aa6.v",
+        "user_source/ip_source/w155_d512_fifo/w155_d512_fifo.v",
+        "user_source/ip_source/w155_d512_fifo/soft_fifo_al_f58e8b3e1f3d.v",
+        "user_source/hdl_source/vtc/uivtc.v",
+        "user_source/hdl_source/ph1p35_ddr/ph1p35_324_ddr_wrapper.v",
+        "tools/ddr2_video_protocol_stub.sv"
+      ],
+      "artifacts": {
+        "result.json": {
+          "original_path": "validation/paxi_8p_late_return/result.json",
+          "snapshot_path": "cases/paxi_8p_late_return/result.json",
+          "sha256": "51dac5f8077bc3ceab838652944e2de3344c71acac4ad0be5c6b6ddb2092f4cd"
+        },
+        "started.json": {
+          "original_path": "validation/paxi_8p_late_return/started.json",
+          "snapshot_path": "cases/paxi_8p_late_return/started.json",
+          "sha256": "c59c6b8c8c014ce426b861b3212be510883c749ce18a792a500eddf4eb0dc5cf"
+        },
+        "compile.log": {
+          "original_path": "validation/paxi_8p_late_return/compile.log",
+          "snapshot_path": "cases/paxi_8p_late_return/compile.log",
+          "sha256": "1f1a1f7352bdc90798d29837f309bcaf305e9d7ade7d45d570cd5d34b96a6e81"
+        },
+        "run.log": {
+          "original_path": "validation/paxi_8p_late_return/run.log",
+          "snapshot_path": "cases/paxi_8p_late_return/run.log",
+          "sha256": "75e43461032b0bb935f2789cd9a4293b903ece10cbb77ddc00c101d4c0629d0d"
+        },
+        "tb.sv": {
+          "original_path": "validation/paxi_8p_late_return/tb.sv",
+          "snapshot_path": "cases/paxi_8p_late_return/tb.sv",
+          "sha256": "3795c2e8cd56a5c7386cbd5c68964b3f4c1743d48bd34b743ff095898d6967dc"
+        },
+        "sim.vvp": {
+          "original_path": "validation/paxi_8p_late_return/sim.vvp",
+          "snapshot_path": "cases/paxi_8p_late_return/sim.vvp",
+          "sha256": "2d72efd5a372eb9d505545929d45b6e516fc3bb40c8742dcaed17cdb0b294bea"
+        }
+      },
+      "elaboration": {
+        "module_scope_count": 24,
+        "style_module_scopes": [],
+        "FULL": 1,
+        "STYLE": 0
+      },
+      "old_result_passed": true
+    },
+    "paxi_8p_late_healthy_return": {
+      "compile_command": [
+        "D:\\anlu\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-DPAXI_VIDEO_LINES=8",
+        "-s",
+        "latency_video_tb",
+        "-Platency_video_tb.FULL=1",
+        "-Platency_video_tb.STYLE=0",
+        "-Platency_video_tb.LEAD=55",
+        "-Platency_video_tb.ALIGN=0",
+        "-Platency_video_tb.LINES=8",
+        "-o",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\validation\\paxi_8p_late_healthy_return\\sim.vvp",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\validation\\paxi_8p_late_healthy_return\\tb.sv",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\isp\\stylize_v5_96.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\isp\\style_guide_v8.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\data_96bit_to_128bit.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\video_in.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\video_out.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\mc_to_user_interface.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\fusion_controls.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\frame_latency_monitor.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\ip_source\\w128_d512_fifo\\w128_d512_fifo.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\ip_source\\w128_d512_fifo\\soft_fifo_al_4057d6b76aa6.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\ip_source\\w155_d512_fifo\\w155_d512_fifo.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\ip_source\\w155_d512_fifo\\soft_fifo_al_f58e8b3e1f3d.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\vtc\\uivtc.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\ph1p35_ddr\\ph1p35_324_ddr_wrapper.v",
+        "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\validation\\paxi_8p_late_healthy_return\\ddr2_video_protocol_stub.sv"
+      ],
+      "output_argument_index": 11,
+      "compiled_inputs": [
+        "validation/paxi_8p_late_healthy_return/tb.sv",
+        "user_source/hdl_source/isp/stylize_v5_96.v",
+        "user_source/hdl_source/isp/style_guide_v8.v",
+        "user_source/hdl_source/data_96bit_to_128bit.v",
+        "user_source/hdl_source/video_in.v",
+        "user_source/hdl_source/video_out.v",
+        "user_source/hdl_source/mc_to_user_interface.v",
+        "user_source/hdl_source/fusion_controls.v",
+        "user_source/hdl_source/frame_latency_monitor.v",
+        "user_source/ip_source/w128_d512_fifo/w128_d512_fifo.v",
+        "user_source/ip_source/w128_d512_fifo/soft_fifo_al_4057d6b76aa6.v",
+        "user_source/ip_source/w155_d512_fifo/w155_d512_fifo.v",
+        "user_source/ip_source/w155_d512_fifo/soft_fifo_al_f58e8b3e1f3d.v",
+        "user_source/hdl_source/vtc/uivtc.v",
+        "user_source/hdl_source/ph1p35_ddr/ph1p35_324_ddr_wrapper.v",
+        "validation/paxi_8p_late_healthy_return/ddr2_video_protocol_stub.sv"
+      ],
+      "artifacts": {
+        "result.json": {
+          "original_path": "validation/paxi_8p_late_healthy_return/result.json",
+          "snapshot_path": "cases/paxi_8p_late_healthy_return/result.json",
+          "sha256": "7bfa9403cef7b426f4e853249fe3d8487da06519a025ed69756b321ee63a1982"
+        },
+        "started.json": {
+          "original_path": "validation/paxi_8p_late_healthy_return/started.json",
+          "snapshot_path": "cases/paxi_8p_late_healthy_return/started.json",
+          "sha256": "351e79797dedce49a65503a0315f502cff838317c862ac494e470e1247635ff9"
+        },
+        "compile.log": {
+          "original_path": "validation/paxi_8p_late_healthy_return/compile.log",
+          "snapshot_path": "cases/paxi_8p_late_healthy_return/compile.log",
+          "sha256": "1f1a1f7352bdc90798d29837f309bcaf305e9d7ade7d45d570cd5d34b96a6e81"
+        },
+        "run.log": {
+          "original_path": "validation/paxi_8p_late_healthy_return/run.log",
+          "snapshot_path": "cases/paxi_8p_late_healthy_return/run.log",
+          "sha256": "da161be604a9708b2401e7ef329238c739fff543bc092a8b08b159d3d72a976b"
+        },
+        "tb.sv": {
+          "original_path": "validation/paxi_8p_late_healthy_return/tb.sv",
+          "snapshot_path": "cases/paxi_8p_late_healthy_return/tb.sv",
+          "sha256": "09949899e44c61bb348aba6a2ded64a4cb6ed91bc077c365d085cfd9214a1f07"
+        },
+        "sim.vvp": {
+          "original_path": "validation/paxi_8p_late_healthy_return/sim.vvp",
+          "snapshot_path": "cases/paxi_8p_late_healthy_return/sim.vvp",
+          "sha256": "21779c156521190c01077f26fe613a36bb463b2eb89c82db1dc75c1a268fa21c"
+        },
+        "ddr2_video_protocol_stub.sv": {
+          "original_path": "validation/paxi_8p_late_healthy_return/ddr2_video_protocol_stub.sv",
+          "snapshot_path": "cases/paxi_8p_late_healthy_return/ddr2_video_protocol_stub.sv",
+          "sha256": "9ffcf729c3dda36c237d4442d6ae04ada07672ec56c280b0e3e7683dcc2f7342"
+        }
+      },
+      "elaboration": {
+        "module_scope_count": 24,
+        "style_module_scopes": [],
+        "FULL": 1,
+        "STYLE": 0
+      },
+      "old_result_passed": true
+    }
+  },
+  "source_sha256": {
+    "user_source/hdl_source/isp/stylize_v5_96.v": "72a26a350f1c7089bd49503378c0d04ec3b92d7fd808563b13d548915b4009aa",
+    "user_source/hdl_source/isp/style_guide_v8.v": "04fe445a64701487d964176af439c8bcb51f2b115b9de5d45fa32585087fb5db",
+    "user_source/hdl_source/data_96bit_to_128bit.v": "6861038b75f2f7010bff99742e4db9470643716c7e6b9b615a27da60d4542924",
+    "user_source/hdl_source/video_in.v": "f0f6e4f09a5070b99543abc2d593d87751b1dac47e905402058e492fc8dfc229",
+    "user_source/hdl_source/video_out.v": "5aa815bef722e0e99d1e31b0c223421430b8db597d394fb3bb91f9d4079e7aa6",
+    "user_source/hdl_source/mc_to_user_interface.v": "0aa6f8cc56cd1f52f0f2554635c246db91c136ba37833023cb084704d9a7de9b",
+    "user_source/hdl_source/fusion_controls.v": "5c9d6912c53ff44cdc4a2b334ea53d6adefdb20f551bb107e5b936b03a149aa9",
+    "user_source/hdl_source/frame_latency_monitor.v": "55514b88411e3df3f0d6ce6de3806a534749bad138cd6a688c8065a45ee4ff39",
+    "user_source/ip_source/w128_d512_fifo/w128_d512_fifo.v": "5cd5f8e2216dd8989dc1e54d42b4da348dbb09f130bbe92deaa205db53a96bb4",
+    "user_source/ip_source/w128_d512_fifo/soft_fifo_al_4057d6b76aa6.v": "8218d772fba069f8c0c6333712c990b8417a447de7f3e73aff7cd342200ba751",
+    "user_source/ip_source/w155_d512_fifo/w155_d512_fifo.v": "d600bcd8e876691d6cf3a512650e7e69118fc8016e9fdf892ac85e4c63851e37",
+    "user_source/ip_source/w155_d512_fifo/soft_fifo_al_f58e8b3e1f3d.v": "198ca29ada4051f0037af040848e416f2b2be6b40e513dd65c531ec557fef424",
+    "user_source/hdl_source/vtc/uivtc.v": "c7deaea83ea04fae9caaf34644fe089aeba6dc54dee26c377aef1df44648e4db",
+    "user_source/hdl_source/ph1p35_ddr/ph1p35_324_ddr_wrapper.v": "5cbc031b67d5101ea3677ab47e688a69a36116bfc6c1d5e6fb683bee0f91a35c",
+    "tools/ddr2_video_protocol_stub.sv": "644190508472c87d8b3c4ff4991440b9dc3795ea0036803d93eb5adb2e2e1362",
+    "validation/paxi_720p/tb.sv": "0a73e065d9f96e98f161fb6b02cabd91ebfc0af5220d22c0d282346c041edc80",
+    "validation/paxi_8p_strong_stall/tb.sv": "ac163637895b90b044c5a1e92c16bd213322098500f5a844a75810f4847dd60e",
+    "validation/paxi_8p_late_return/tb.sv": "3795c2e8cd56a5c7386cbd5c68964b3f4c1743d48bd34b743ff095898d6967dc",
+    "validation/paxi_8p_late_healthy_return/tb.sv": "09949899e44c61bb348aba6a2ded64a4cb6ed91bc077c365d085cfd9214a1f07",
+    "validation/paxi_8p_late_healthy_return/ddr2_video_protocol_stub.sv": "9ffcf729c3dda36c237d4442d6ae04ada07672ec56c280b0e3e7683dcc2f7342"
+  },
+  "snapshot_artifacts": {
+    "cases/paxi_720p/result.json": "77f9811cc2f6f56cd37e3e487952c0d2eaab40e2bdd47d022a8ea5d0108c3643",
+    "cases/paxi_720p/started.json": "f096b2be03f7eba120dd8d42c33067848d2d3243398ee8512829a72dcfabafb9",
+    "cases/paxi_720p/compile.log": "1f1a1f7352bdc90798d29837f309bcaf305e9d7ade7d45d570cd5d34b96a6e81",
+    "cases/paxi_720p/run.log": "b587894df60bc82868920a1d449e30fdbd42220d123ee513e38205a2e0840265",
+    "cases/paxi_720p/tb.sv": "0a73e065d9f96e98f161fb6b02cabd91ebfc0af5220d22c0d282346c041edc80",
+    "cases/paxi_720p/sim.vvp": "4cb1e08da5d166cb5fa016401d69f6c78e5655a894be81b8a269ba84ecc6cc52",
+    "cases/paxi_8p_strong_stall/result.json": "1c13991933e9c54659a4b6ac71e739b3bf3e97a0c5cd8397dbb315c150051af7",
+    "cases/paxi_8p_strong_stall/started.json": "537bac2be8b4d9e6fab4c5eef81634c407b5acbea56f4571730a4f9ea18f62a3",
+    "cases/paxi_8p_strong_stall/compile.log": "1f1a1f7352bdc90798d29837f309bcaf305e9d7ade7d45d570cd5d34b96a6e81",
+    "cases/paxi_8p_strong_stall/run.log": "002edf281da7c81aabfece97ee99749fd4dfea80f6f12eb063b70405e38274b0",
+    "cases/paxi_8p_strong_stall/tb.sv": "ac163637895b90b044c5a1e92c16bd213322098500f5a844a75810f4847dd60e",
+    "cases/paxi_8p_strong_stall/sim.vvp": "dc5f0e3cdca781a2bdb49ef67a18b60e621d4142ce7bd8773515977629af9a81",
+    "cases/paxi_8p_late_return/result.json": "51dac5f8077bc3ceab838652944e2de3344c71acac4ad0be5c6b6ddb2092f4cd",
+    "cases/paxi_8p_late_return/started.json": "c59c6b8c8c014ce426b861b3212be510883c749ce18a792a500eddf4eb0dc5cf",
+    "cases/paxi_8p_late_return/compile.log": "1f1a1f7352bdc90798d29837f309bcaf305e9d7ade7d45d570cd5d34b96a6e81",
+    "cases/paxi_8p_late_return/run.log": "75e43461032b0bb935f2789cd9a4293b903ece10cbb77ddc00c101d4c0629d0d",
+    "cases/paxi_8p_late_return/tb.sv": "3795c2e8cd56a5c7386cbd5c68964b3f4c1743d48bd34b743ff095898d6967dc",
+    "cases/paxi_8p_late_return/sim.vvp": "2d72efd5a372eb9d505545929d45b6e516fc3bb40c8742dcaed17cdb0b294bea",
+    "cases/paxi_8p_late_healthy_return/result.json": "7bfa9403cef7b426f4e853249fe3d8487da06519a025ed69756b321ee63a1982",
+    "cases/paxi_8p_late_healthy_return/started.json": "351e79797dedce49a65503a0315f502cff838317c862ac494e470e1247635ff9",
+    "cases/paxi_8p_late_healthy_return/compile.log": "1f1a1f7352bdc90798d29837f309bcaf305e9d7ade7d45d570cd5d34b96a6e81",
+    "cases/paxi_8p_late_healthy_return/run.log": "da161be604a9708b2401e7ef329238c739fff543bc092a8b08b159d3d72a976b",
+    "cases/paxi_8p_late_healthy_return/tb.sv": "09949899e44c61bb348aba6a2ded64a4cb6ed91bc077c365d085cfd9214a1f07",
+    "cases/paxi_8p_late_healthy_return/sim.vvp": "21779c156521190c01077f26fe613a36bb463b2eb89c82db1dc75c1a268fa21c",
+    "cases/paxi_8p_late_healthy_return/ddr2_video_protocol_stub.sv": "9ffcf729c3dda36c237d4442d6ae04ada07672ec56c280b0e3e7683dcc2f7342",
+    "old_stylize_v5_96.v": "72a26a350f1c7089bd49503378c0d04ec3b92d7fd808563b13d548915b4009aa"
+  },
+  "runtime_sha256": {
+    "D:\\anlu\\iverilog\\bin\\iverilog.exe": "803b8844af2cc8ed70b5f08b07ffa749901280e81339617ca3e72cbbb852bd2b",
+    "D:\\anlu\\iverilog\\bin\\vvp.exe": "e2f442f4d5aa76e55c85c3ff77e4446fbfdb9946b7cfe8a2dff87f275da17b62",
+    "D:\\anlu\\iverilog\\lib\\ivl\\system.vpi": "abaa7289f736976cc6b37f4e32e5c98e5564650aa4f8e0e6716dd53155672fc1",
+    "D:\\anlu\\iverilog\\lib\\ivl\\vhdl_sys.vpi": "36515195d2d49807cf09a390bc99acb7cfd90ebf3245dd4a2a349deb264fd977",
+    "D:\\anlu\\iverilog\\lib\\ivl\\vhdl_textio.vpi": "8fd25610d05aa492696a626f4f853fa14da6959ca828c08f730255d048072071",
+    "D:\\anlu\\iverilog\\lib\\ivl\\v2005_math.vpi": "c5f186ab15bd59fd19a4c59b3601c271265b53cdc1c738f0976ef156515dbf72",
+    "D:\\anlu\\iverilog\\lib\\ivl\\va_math.vpi": "ee278a347afbb0fb9471f517069e53283852d33ca59379f5d944136ff3013ae3",
+    "D:\\anlu\\iverilog\\lib\\ivl\\v2009.vpi": "f3701591797f5763be94f7455fa1aee8616e6c962621cadab3f9b2f18d29d69f"
+  },
+  "snapshot_tool_sha256": "16c5061e5d41dcf8bc6a5bbdb3d8d268798c0577e4129f67af0833737f56aaa7",
+  "source_snapshots_sha256": {
+    "user_source/hdl_source/isp/stylize_v5_96.v": "72a26a350f1c7089bd49503378c0d04ec3b92d7fd808563b13d548915b4009aa",
+    "user_source/hdl_source/isp/style_guide_v8.v": "04fe445a64701487d964176af439c8bcb51f2b115b9de5d45fa32585087fb5db",
+    "user_source/hdl_source/data_96bit_to_128bit.v": "6861038b75f2f7010bff99742e4db9470643716c7e6b9b615a27da60d4542924",
+    "user_source/hdl_source/video_in.v": "f0f6e4f09a5070b99543abc2d593d87751b1dac47e905402058e492fc8dfc229",
+    "user_source/hdl_source/video_out.v": "5aa815bef722e0e99d1e31b0c223421430b8db597d394fb3bb91f9d4079e7aa6",
+    "user_source/hdl_source/mc_to_user_interface.v": "0aa6f8cc56cd1f52f0f2554635c246db91c136ba37833023cb084704d9a7de9b",
+    "user_source/hdl_source/fusion_controls.v": "5c9d6912c53ff44cdc4a2b334ea53d6adefdb20f551bb107e5b936b03a149aa9",
+    "user_source/hdl_source/frame_latency_monitor.v": "55514b88411e3df3f0d6ce6de3806a534749bad138cd6a688c8065a45ee4ff39",
+    "user_source/ip_source/w128_d512_fifo/w128_d512_fifo.v": "5cd5f8e2216dd8989dc1e54d42b4da348dbb09f130bbe92deaa205db53a96bb4",
+    "user_source/ip_source/w128_d512_fifo/soft_fifo_al_4057d6b76aa6.v": "8218d772fba069f8c0c6333712c990b8417a447de7f3e73aff7cd342200ba751",
+    "user_source/ip_source/w155_d512_fifo/w155_d512_fifo.v": "d600bcd8e876691d6cf3a512650e7e69118fc8016e9fdf892ac85e4c63851e37",
+    "user_source/ip_source/w155_d512_fifo/soft_fifo_al_f58e8b3e1f3d.v": "198ca29ada4051f0037af040848e416f2b2be6b40e513dd65c531ec557fef424",
+    "user_source/hdl_source/vtc/uivtc.v": "c7deaea83ea04fae9caaf34644fe089aeba6dc54dee26c377aef1df44648e4db",
+    "user_source/hdl_source/ph1p35_ddr/ph1p35_324_ddr_wrapper.v": "5cbc031b67d5101ea3677ab47e688a69a36116bfc6c1d5e6fb683bee0f91a35c",
+    "tools/ddr2_video_protocol_stub.sv": "644190508472c87d8b3c4ff4991440b9dc3795ea0036803d93eb5adb2e2e1362",
+    "validation/paxi_720p/tb.sv": "0a73e065d9f96e98f161fb6b02cabd91ebfc0af5220d22c0d282346c041edc80",
+    "validation/paxi_8p_strong_stall/tb.sv": "ac163637895b90b044c5a1e92c16bd213322098500f5a844a75810f4847dd60e",
+    "validation/paxi_8p_late_return/tb.sv": "3795c2e8cd56a5c7386cbd5c68964b3f4c1743d48bd34b743ff095898d6967dc",
+    "validation/paxi_8p_late_healthy_return/tb.sv": "09949899e44c61bb348aba6a2ded64a4cb6ed91bc077c365d085cfd9214a1f07",
+    "validation/paxi_8p_late_healthy_return/ddr2_video_protocol_stub.sv": "9ffcf729c3dda36c237d4442d6ae04ada07672ec56c280b0e3e7683dcc2f7342"
+  }
+}

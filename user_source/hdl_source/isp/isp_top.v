@@ -1,6 +1,7 @@
 module isp_top (
     input I_wb_allow,I_wb_relearn,
     input [1:0] I_mode_req,
+    input [11:0] I_style_levels,
     output wire O_wb_locked,
     output wire [12:0] O_color_gain_r,O_color_gain_b,
     output [95:0] O_meter_data,
@@ -162,6 +163,7 @@ awb #(
         .I_clk    (axi4s_video_aclk),
         .I_rst_n  (I_rst_n),
         .I_mode   (sty_mode),
+        .I_level  (sty_mode==1?I_style_levels[5:3]:sty_mode==2?I_style_levels[8:6]:sty_mode==3?I_style_levels[11:9]:I_style_levels[2:0]),
         .I_tlast  (quality_last),
         .I_tuser  (quality_user),
         .I_tdata  (quality_data),

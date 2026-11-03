@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project Version="3" Minor="2" Path="D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v11_sensor_window_fix/td_project">
+<Project Version="3" Minor="2" Path="D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/td_project">
     <Project_Created_Time></Project_Created_Time>
     <TD_Encoding>UTF-8</TD_Encoding>
     <TD_Version>6.2.168116</TD_Version>
@@ -506,6 +506,14 @@
                     <Attr Name="CompileOrder" Val="76"/>
                 </FileInfo>
             </File>
+            <File Path="../user_source/hdl_source/frame_latency_monitor.v"><FileInfo>
+                <Attr Name="UsedInSyn" Val="true"/><Attr Name="UsedInP&R" Val="true"/>
+                <Attr Name="BelongTo" Val="design_1"/><Attr Name="CompileOrder" Val="202"/>
+            </FileInfo></File>
+            <File Path="../user_source/hdl_source/fusion_chinese_font_rom.v"><FileInfo>
+                <Attr Name="UsedInSyn" Val="true"/><Attr Name="UsedInP&R" Val="true"/>
+                <Attr Name="BelongTo" Val="design_1"/><Attr Name="CompileOrder" Val="185"/>
+            </FileInfo></File>
         </Verilog>
         <System_Verilog>
             <File Path="../user_source/hdl_source/mipi_dphy_rx/mipi_dphy_rx_ph1p_mipiio_wrapper.sv">

@@ -1,0 +1,25 @@
+--- a/user_source/hdl_source/isp/stylize_v5_96.v
++++ b/user_source/hdl_source/isp/stylize_v5_96.v
+@@ -468,12 +468,16 @@
+   delta=$signed({1'b0,target})-$signed({1'b0,y});if(delta<lower)delta=lower;else if(delta>upper)delta=upper;
+   for(ch=0;ch<3;ch=ch+1)begin
+    value=$signed({1'b0,pixel[23-8*ch-:8]})+delta;c=value[7:0];
+-   if(!is_edge || level==0)drop=0;
+-   else if(level==1)drop=mag<64?(c>>3):(c>>2);
+-   else if(level==3)drop=mag<64?(c>>1):c-(c>>2);
+-   else if(level==4)drop=c;
+-   else drop=mag<64?(c>>2):(c>>1);
+-   cartoon_colour[23-8*ch-:8]=c-drop;
++   drop=0;
++   if(!is_edge || level==0)cartoon_colour[23-8*ch-:8]=c;
++   else if(level==4)cartoon_colour[23-8*ch-:8]=8'd0;
++   else if(level==3 && mag>=64)cartoon_colour[23-8*ch-:8]=c>>2;
++   else begin
++    if(level==1)drop=mag<64?(c>>3):(c>>2);
++    else if(level==3)drop=c>>1;
++    else drop=mag<64?(c>>2):(c>>1);
++    cartoon_colour[23-8*ch-:8]=c-drop;
++   end
+   end
+  end
+ endfunction

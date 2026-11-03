@@ -1,0 +1,173 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/sketch_rom
+vgate_ink_rom_pair_01
+Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+Z2 !s110 1793672202
+!i10b 1
+!s100 ^<RUMQfhd;>G`lMHH04?[0
+Ic_i;l>0fJ`gMaMC?5ncG82
+Z3 V`JN@9S9cnhjKRR_L]QIcM3
+Z4 !s105 gate_rom_pair_models_v_unit
+S1
+R0
+Z5 w1793672202
+Z6 8D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/sketch_rom/gate_rom_pair_models.v
+Z7 FD:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/sketch_rom/gate_rom_pair_models.v
+L0 1
+Z8 OV;L;10.3c;59
+r1
+!s85 0
+31
+Z9 !s108 1793672202.456000
+Z10 !s107 D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/sketch_rom/sketch_rom_gate_tb.sv|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/sketch_rom/gate_rom_pair_models.v|D:/anlu/TD_6.2.1_Engineer_6.2.168.116/sim_release/ph1p/ph1p_phy_gsr.v|D:/anlu/TD_6.2.1_Engineer_6.2.168.116/sim_release/ph1p/ph1p_phy_eram_v2.v|
+Z11 !s90 -sv|D:/anlu/TD_6.2.1_Engineer_6.2.168.116/sim_release/ph1p/ph1p_phy_eram_v2.v|D:/anlu/TD_6.2.1_Engineer_6.2.168.116/sim_release/ph1p/ph1p_phy_gsr.v|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/sketch_rom/gate_rom_pair_models.v|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/sketch_rom/sketch_rom_gate_tb.sv|
+!i113 1
+o-sv
+vgate_ink_rom_pair_23
+R1
+R2
+!i10b 1
+!s100 l@`fV8SGNZGD<hcb:FThW3
+IafPM?1B35nhMDfDPfjFe02
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 138
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+v8me/t+Ygw4rBOx1gLRhrMdKzSo8GKn5e+CIQO5QUUhU=
+R1
+R2
+!i10b 0
+!s100 eYo]=RXC5m@9]@z`mZ_]V2
+Ic]2EGg?AQmkVJ>AF]@ka52
+R3
+!i8a 303351888
+Z12 !s105 ph1p_phy_eram_v2_v_unit
+S1
+d.
+Z13 Fnofile
+Z14 L0 2485
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+n3b41684
+v1UFOqkhKxTJBoxJaH0Jz1mGgs0Zo/nyQoZhDF40SIjg=
+R1
+R2
+!i10b 0
+!s100 hh7g@IL0hSVJiYJPhXULI0
+I8cEKaK5PQQ?m9Mob^d[<c2
+R3
+!i8a 674840000
+R12
+S1
+d.
+R13
+R14
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+n6f236b4
+vPH1P_PHY_ERAM_V2
+R1
+R2
+!i10b 1
+!s100 0QW4WQYB[NzK@PUSCC5>:0
+I9DeOLzEjAmZULE^gXn8nN3
+R3
+R12
+S1
+R0
+w1752052164
+8D:/anlu/TD_6.2.1_Engineer_6.2.168.116/sim_release/ph1p/ph1p_phy_eram_v2.v
+FD:/anlu/TD_6.2.1_Engineer_6.2.168.116/sim_release/ph1p/ph1p_phy_eram_v2.v
+L0 28
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+n@p@h1@p_@p@h@y_@e@r@a@m_@v2
+vPH1P_PHY_GSR
+R1
+R2
+!i10b 1
+!s100 P;L[QRQg?:i<^IPj5zIA=3
+I=G5SaVS0M9:LhK<CX;_zS1
+R3
+!s105 ph1p_phy_gsr_v_unit
+S1
+R0
+w1752052166
+8D:/anlu/TD_6.2.1_Engineer_6.2.168.116/sim_release/ph1p/ph1p_phy_gsr.v
+FD:/anlu/TD_6.2.1_Engineer_6.2.168.116/sim_release/ph1p/ph1p_phy_gsr.v
+L0 24
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+n@p@h1@p_@p@h@y_@g@s@r
+vsketch_rom_gate_tb
+R1
+R2
+!i10b 1
+!s100 zYEVKe]e[8JR6mbYTWW]<2
+IH02AYfGJf`?XhbB?<nEK63
+R3
+!s105 sketch_rom_gate_tb_sv_unit
+S1
+R0
+w1793670265
+8D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/sketch_rom/sketch_rom_gate_tb.sv
+FD:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/sketch_rom/sketch_rom_gate_tb.sv
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv

@@ -1,7 +1,0 @@
-# Regenerated validation artifacts
-validation/**/*.log
-validation/**/*.vvp
-
-# Timestamped tool logs and DDR diagnostics
-td_project/camera_to_dsi_display_Runs/*/td_*.log
-user_source/hdl_source/ph1p35_ddr/ddr2_*.log

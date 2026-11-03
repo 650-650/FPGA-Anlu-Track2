@@ -1,0 +1,89 @@
+RUNNING case=paxi_720p production_mc_sha256=0aa6f8cc56cd1f52f0f2554635c246db91c136ba37833023cb084704d9a7de9b wrapper_sha256=5cbc031b67d5101ea3677ab47e688a69a36116bfc6c1d5e6fb683bee0f91a35c
+READ_BEGIN seq=    0 slot=2 snapshot=0 claimed=0001 meta=0001 raw=0000 wr=0000 bad=0001 outstanding=   0 prevwords=     0 prevbad=1
+PAXI_READ_SNAPSHOT seq=0 read_en=0 return=0 outstanding=0 words=0 bad=1 fifo_overflows=0 reset_returns=0
+PAXI_PIXEL_ERROR seq=1 pixel=0 got=xxxxxx wanted=x00000 fifo_overflows=0 max_outstanding=119
+PIXEL_ORIGIN seq=1 id=x first_rgb=xxxxxx
+PAXI_PIXEL_ERROR seq=1 pixel=1 got=xxxxxx wanted=x00001 fifo_overflows=0 max_outstanding=119
+PAXI_PIXEL_ERROR seq=1 pixel=2 got=xxxxxx wanted=x00002 fifo_overflows=0 max_outstanding=119
+PAXI_PIXEL_ERROR seq=1 pixel=3 got=xxxxxx wanted=x00003 fifo_overflows=0 max_outstanding=119
+WRITE_FRAME index=0 slot=0 words=480 first=10000010000110000210000310000410
+PAXI_READ_SNAPSHOT seq=1 read_en=0 return=0 outstanding=0 words=172800 bad=1 fifo_overflows=0 reset_returns=0
+READ_BEGIN seq=    1 slot=3 snapshot=0 claimed=0011 meta=0011 raw=0000 wr=0010 bad=0001 outstanding=   0 prevwords=172800 prevbad=1
+PAXI_REJECTED seq=1 id=0 status=07 reason=0101
+PAXI_PIXEL_ERROR seq=2 pixel=0 got=xxxxxx wanted=x00000 fifo_overflows=0 max_outstanding=119
+PIXEL_ORIGIN seq=2 id=x first_rgb=xxxxxx
+PAXI_PIXEL_ERROR seq=2 pixel=1 got=xxxxxx wanted=x00001 fifo_overflows=0 max_outstanding=119
+PAXI_PIXEL_ERROR seq=2 pixel=2 got=xxxxxx wanted=x00002 fifo_overflows=0 max_outstanding=119
+PAXI_PIXEL_ERROR seq=2 pixel=3 got=xxxxxx wanted=x00003 fifo_overflows=0 max_outstanding=119
+WRITE_FRAME index=1 slot=1 words=172800 first=20000020000120000220000320000420
+READ_BEGIN seq=    2 slot=0 snapshot=0 claimed=0111 meta=0111 raw=0000 wr=0110 bad=0001 outstanding=   0 prevwords=172800 prevbad=1
+PAXI_READ_SNAPSHOT seq=2 read_en=0 return=0 outstanding=0 words=172800 bad=1 fifo_overflows=0 reset_returns=0
+PAXI_REJECTED seq=2 id=0 status=07 reason=0101
+PIXEL_ORIGIN seq=3 id=1 first_rgb=100000
+PAXI_PIXEL_ERROR seq=3 pixel=2560 got=xxxxxx wanted=100a00 fifo_overflows=0 max_outstanding=119
+PAXI_PIXEL_ERROR seq=3 pixel=2561 got=xxxxxx wanted=100a01 fifo_overflows=0 max_outstanding=119
+PAXI_PIXEL_ERROR seq=3 pixel=2562 got=xxxxxx wanted=100a02 fifo_overflows=0 max_outstanding=119
+PAXI_PIXEL_ERROR seq=3 pixel=2563 got=xxxxxx wanted=100a03 fifo_overflows=0 max_outstanding=119
+WRITE_FRAME index=2 slot=2 words=172800 first=30000030000130000230000330000430
+PAXI_READ_SNAPSHOT seq=3 read_en=0 return=0 outstanding=0 words=172800 bad=1 fifo_overflows=0 reset_returns=0
+READ_BEGIN seq=    3 slot=1 snapshot=1 claimed=1111 meta=1111 raw=0000 wr=1110 bad=0001 outstanding=   0 prevwords=172800 prevbad=1
+PAXI_REJECTED seq=3 id=1 status=06 reason=0105
+PIXEL_ORIGIN seq=4 id=2 first_rgb=200000
+WRITE_FRAME index=3 slot=3 words=172800 first=40000040000140000240000340000440
+READ_BEGIN seq=    4 slot=2 snapshot=1 claimed=1111 meta=1111 raw=0000 wr=1111 bad=0000 outstanding=   0 prevwords=172800 prevbad=0
+PAXI_READ_SNAPSHOT seq=4 read_en=0 return=0 outstanding=0 words=172800 bad=0 fifo_overflows=0 reset_returns=0
+PIXEL_SCOREBOARD_PASS seq=4 pixels=921600
+EXTERNAL_ORACLE_PASS seq=4 id=2 us=49380 event_us=49380
+MEASUREMENT id=2 us=49380 repeat=0 skip=0
+PIXEL_ORIGIN seq=5 id=3 first_rgb=300000
+WRITE_FRAME index=4 slot=0 words=172800 first=50000050000150000250000350000450
+PAXI_READ_SNAPSHOT seq=5 read_en=0 return=0 outstanding=0 words=172800 bad=0 fifo_overflows=0 reset_returns=0
+READ_BEGIN seq=    5 slot=3 snapshot=1 claimed=1111 meta=1111 raw=0000 wr=1111 bad=0000 outstanding=   0 prevwords=172800 prevbad=0
+PIXEL_SCOREBOARD_PASS seq=5 pixels=921600
+EXTERNAL_ORACLE_PASS seq=5 id=3 us=49213 event_us=49212
+MEASUREMENT id=3 us=49213 repeat=0 skip=0
+PIXEL_ORIGIN seq=6 id=4 first_rgb=400000
+WRITE_FRAME index=5 slot=1 words=172800 first=60000060000160000260000360000460
+READ_BEGIN seq=    6 slot=0 snapshot=1 claimed=1111 meta=1111 raw=0000 wr=1111 bad=0000 outstanding=   0 prevwords=172800 prevbad=0
+PAXI_READ_SNAPSHOT seq=6 read_en=0 return=0 outstanding=0 words=172800 bad=0 fifo_overflows=0 reset_returns=0
+PIXEL_SCOREBOARD_PASS seq=6 pixels=921600
+EXTERNAL_ORACLE_PASS seq=6 id=4 us=49046 event_us=49045
+MEASUREMENT id=4 us=49046 repeat=0 skip=0
+PIXEL_ORIGIN seq=7 id=5 first_rgb=500000
+WRITE_FRAME index=6 slot=2 words=172800 first=70000070000170000270000370000470
+PAXI_READ_SNAPSHOT seq=7 read_en=0 return=0 outstanding=0 words=172800 bad=0 fifo_overflows=0 reset_returns=0
+READ_BEGIN seq=    7 slot=1 snapshot=1 claimed=1111 meta=1111 raw=0000 wr=1111 bad=0000 outstanding=   0 prevwords=172800 prevbad=0
+PIXEL_SCOREBOARD_PASS seq=7 pixels=921600
+EXTERNAL_ORACLE_PASS seq=7 id=5 us=48879 event_us=48878
+MEASUREMENT id=5 us=48879 repeat=0 skip=0
+PIXEL_ORIGIN seq=8 id=6 first_rgb=600000
+WRITE_FRAME index=7 slot=3 words=172800 first=80000080000180000280000380000480
+READ_BEGIN seq=    8 slot=2 snapshot=1 claimed=1111 meta=1111 raw=0000 wr=1111 bad=0000 outstanding=   0 prevwords=172800 prevbad=0
+PAXI_READ_SNAPSHOT seq=8 read_en=0 return=0 outstanding=0 words=172800 bad=0 fifo_overflows=0 reset_returns=0
+PIXEL_SCOREBOARD_PASS seq=8 pixels=921600
+EXTERNAL_ORACLE_PASS seq=8 id=6 us=48711 event_us=48711
+MEASUREMENT id=6 us=48711 repeat=0 skip=0
+PIXEL_ORIGIN seq=9 id=7 first_rgb=700000
+PAXI_READ_SNAPSHOT seq=9 read_en=0 return=0 outstanding=0 words=172800 bad=0 fifo_overflows=0 reset_returns=0
+READ_BEGIN seq=    9 slot=2 snapshot=1 claimed=1111 meta=1111 raw=0000 wr=1111 bad=0000 outstanding=   0 prevwords=172800 prevbad=0
+PIXEL_SCOREBOARD_PASS seq=9 pixels=921600
+EXTERNAL_ORACLE_PASS seq=9 id=7 us=48544 event_us=48544
+MEASUREMENT id=7 us=48544 repeat=0 skip=0
+PIXEL_ORIGIN seq=10 id=7 first_rgb=700000
+READ_BEGIN seq=   10 slot=2 snapshot=1 claimed=1111 meta=1111 raw=0000 wr=1111 bad=0000 outstanding=   0 prevwords=172800 prevbad=0
+PAXI_READ_SNAPSHOT seq=10 read_en=0 return=0 outstanding=0 words=172800 bad=0 fifo_overflows=0 reset_returns=0
+PIXEL_SCOREBOARD_PASS seq=10 pixels=921600
+EXTERNAL_ORACLE_PASS seq=10 id=7 us=65045 event_us=65045
+MEASUREMENT id=7 us=65045 repeat=1 skip=0
+PIXEL_ORIGIN seq=11 id=7 first_rgb=700000
+PAXI_READ_SNAPSHOT seq=11 read_en=0 return=0 outstanding=0 words=172800 bad=0 fifo_overflows=0 reset_returns=0
+READ_BEGIN seq=   11 slot=2 snapshot=1 claimed=1111 meta=1111 raw=0000 wr=1111 bad=0000 outstanding=   0 prevwords=172800 prevbad=0
+PIXEL_SCOREBOARD_PASS seq=11 pixels=921600
+EXTERNAL_ORACLE_PASS seq=11 id=7 us=81546 event_us=81545
+MEASUREMENT id=7 us=81546 repeat=1 skip=0
+PIXEL_ORIGIN seq=12 id=7 first_rgb=700000
+VTC_RESULT valid=1 updates=8 id=7 under=0 claims=9 words=1382880
+PAXI_PIXEL_SUMMARY valid_frames=8 bad_pixel_frames_rejected=3 output_fifo_overflows=0
+PAXI_PROTOCOL_COUNTS AW=1382880 W=1382880 commits=1382880 AR=1925633 R=1925559 aw_first=31860 w_first=37311 blocked_AR_with_AWready=138112 returns_in_reset=0
+PAXI_TRANSPORT_PASS source_frames=9 measured=8 hud=8
+D:\FPGA_Work\AnlogicCup2026\07_stylize_flame_fusion_v16_scene_levels_latency\validation\paxi_720p\tb.sv:177: $finish called at 200016983412 (1ps)

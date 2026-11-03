@@ -1,0 +1,24 @@
+{
+  "pass": true,
+  "results": [
+    {
+      "top": "controls_params_tb",
+      "checks": 58,
+      "pass": true
+    },
+    {
+      "top": "compare_tb",
+      "checks": 77726,
+      "pass": true
+    }
+  ],
+  "source_sha256": {
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\fusion_controls.v": "5c9d6912c53ff44cdc4a2b334ea53d6adefdb20f551bb107e5b936b03a149aa9",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\validation\\controls_levels\\legacy_controls.v": "a8be31dbb2b18bb5424ea5852d8886fd6a8ecdb1f4a8ecc4a82cdf912e777b8d",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\validation\\controls_levels\\teammate_controls_params_tb.sv": "b667ed5e2cbd0efc9a7c0384c4a0110f72b91d98c231d8b2108f9c5bcb89228d",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\validation\\controls_levels\\compare_tb.sv": "541ec98c8635402a07ff1addea97429a6783c4be6f79a755b68fd096802064da"
+  },
+  "verifier_sha256": "e3811931212efe980cce751f3a737333961ae923d9dfede84d01742fad8b33b3",
+  "teammate_TB_sha256": "b667ed5e2cbd0efc9a7c0384c4a0110f72b91d98c231d8b2108f9c5bcb89228d",
+  "scope": "Five levels, memory, SW4, debounce, K3/K4 holds, coherent frame commit; every original control/color/alarm/reset output matches V15 on same pins."
+}

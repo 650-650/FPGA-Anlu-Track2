@@ -1,0 +1,7 @@
+{
+  "run": "phy_1",
+  "stopped": "2026-11-03T10:11:07.9589088+08:00",
+  "pid": 58208,
+  "style_sha256": "811810da14ab2e86fe921feb5a2801b4c082a95c9de7cf147d20c68a9d4d892a",
+  "reason": "Persistent high-congestion route; replaced with a proven 292-LUT-smaller equivalent output expression, not a completed pass"
+}

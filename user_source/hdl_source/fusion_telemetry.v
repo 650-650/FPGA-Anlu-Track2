@@ -3,6 +3,8 @@ module fusion_telemetry #(parameter integer CLK_HZ=75000000)(
     input wire [11:0] I_x,I_y,
     input wire [31:0] I_pixels,
     input wire [15:0] I_exposure,I_gain,
+    input wire [31:0] I_latency_us,
+    output reg [19:0] O_latency_bcd,
     output reg [15:0] O_x_bcd,O_y_bcd,
     output reg [23:0] O_pixels_bcd,
     output reg [19:0] O_seconds_bcd,O_exposure_bcd,
@@ -38,18 +40,18 @@ module fusion_telemetry #(parameter integer CLK_HZ=75000000)(
     // One shared shift/add-3 converter, eight values per video frame.
     // No dividers, multipliers, or additional image buffers.
     reg busy;
-    reg [2:0] field;
+    reg [3:0] field;
     reg [5:0] bit_count;
     reg [31:0] binary;
     reg [39:0] bcd;
     reg [39:0] adjusted,next_bcd;
     integer k;
     function [31:0] value_for;
-        input [2:0] f;
+        input [3:0] f;
         begin case(f)
             0:value_for={20'd0,I_x};1:value_for={20'd0,I_y};2:value_for=I_pixels;
             3:value_for={16'd0,seconds};4:value_for={24'd0,cam_fps};5:value_for={24'd0,out_fps};
-            6:value_for={16'd0,I_exposure};default:value_for={16'd0,I_gain};
+            6:value_for={16'd0,I_exposure};7:value_for={16'd0,I_gain};default:value_for=I_latency_us;
         endcase end
     endfunction
     always @* begin
@@ -61,7 +63,7 @@ module fusion_telemetry #(parameter integer CLK_HZ=75000000)(
         if(!I_rst_n) begin
             busy<=0;field<=0;bit_count<=0;binary<=0;bcd<=0;
             O_x_bcd<=0;O_y_bcd<=0;O_pixels_bcd<=0;O_seconds_bcd<=0;
-            O_camera_fps_bcd<=0;O_output_fps_bcd<=0;O_exposure_bcd<=0;O_gain_bcd<=0;
+            O_camera_fps_bcd<=0;O_output_fps_bcd<=0;O_exposure_bcd<=0;O_gain_bcd<=0;O_latency_bcd<=0;
         end else if(I_frame) begin busy<=1;field<=0;bit_count<=0;binary<=value_for(0);bcd<=0;end
         else if(busy) begin
             binary<={binary[30:0],1'b0};bcd<=next_bcd;
@@ -71,8 +73,10 @@ module fusion_telemetry #(parameter integer CLK_HZ=75000000)(
                     2:O_pixels_bcd<=next_bcd[23:0];3:O_seconds_bcd<=next_bcd[19:0];
                     4:O_camera_fps_bcd<=next_bcd[7:0];5:O_output_fps_bcd<=next_bcd[7:0];
                     6:O_exposure_bcd<=next_bcd[19:0];7:O_gain_bcd<=next_bcd[11:0];
+                    // Five digits in 10us units, displayed as XXX.XX ms.
+                    8:O_latency_bcd<=next_bcd[23:4];
                 endcase
-                if(field==7)busy<=0;
+                if(field==8)busy<=0;
                 else begin field<=field+1'b1;binary<=value_for(field+1'b1);bit_count<=0;bcd<=0;end
             end else bit_count<=bit_count+1'b1;
         end

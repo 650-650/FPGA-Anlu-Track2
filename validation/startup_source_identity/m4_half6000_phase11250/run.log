@@ -1,0 +1,20 @@
+WRITE_SOF source_pack=2 local_claim=1 cp=1 slot=0
+WRITE_SOF source_pack=3 local_claim=2 cp=2 slot=1
+WRITE_SOF source_pack=4 local_claim=3 cp=3 slot=2
+WRITE_SOF source_pack=5 local_claim=4 cp=4 slot=3
+WRITE_SOF source_pack=6 local_claim=5 cp=5 slot=0
+WRITE_SOF source_pack=7 local_claim=6 cp=6 slot=1
+WRITE_SOF source_pack=8 local_claim=7 cp=7 slot=2
+WRITE_SOF source_pack=9 local_claim=8 cp=8 slot=3
+WRITE_SOF source_pack=10 local_claim=9 cp=9 slot=0
+WRITE_SOF source_pack=11 local_claim=10 cp=10 slot=1
+WRITE_SOF source_pack=12 local_claim=11 cp=11 slot=2
+STATE mode=4 packs=12 claims=11 cp=12 meta=1111 complete=1111 bad=0000 qcount=0 qfault=0 pack_good=1 writes=2640
+SOURCE_BINDING slot=0 metadata_id=10 actual_first_word_frame=10
+SOURCE_BINDING slot=1 metadata_id=11 actual_first_word_frame=11
+SOURCE_BINDING slot=2 metadata_id=12 actual_first_word_frame=12
+SOURCE_BINDING slot=3 metadata_id=9 actual_first_word_frame=9
+ONE_LOST_SOF_CORRECT_SOURCE_IDENTITY_PASS
+IDENTITY_CHECKS 50846
+STARTUP_SEQUENCE_AUDIT_PASS mode=4
+D:\FPGA_Work\AnlogicCup2026\07_stylize_flame_fusion_v16_scene_levels_latency\validation\startup_source_identity\tb.sv:94: $finish called at 217867428 (1ps)

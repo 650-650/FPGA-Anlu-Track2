@@ -3,6 +3,7 @@
 module display_contrast #(parameter WIDTH=1280,HEIGHT=720)(
  input clk,rst_n,vs,hs,de,input [23:0] rgb,input overlay,bypass,cartoon,keep_legacy,
  input stat_vs,stat_de,input [23:0] stat_rgb,input stat_enable,
+ input [2:0] clear_level,
  output O_vs,O_hs,O_de,output reg [23:0] O_rgb,output reg [5:0] O_offset
 );
  reg stat_vs_d;
@@ -124,8 +125,27 @@ module display_contrast #(parameter WIDTH=1280,HEIGHT=720)(
  wire [7:0] room=low_room<high_room?low_room:high_room;
  wire [7:0] pedestal=strength<room?{2'd0,strength}:room;
  wire [7:0] adjusted_luma=luminance-pedestal;
+ function [7:0] contrast_input;
+  input [7:0] value;input [2:0] level;
+  reg signed [10:0] expanded;
+  reg [7:0] headroom,lift_room,strong_lift;
+  begin
+   headroom=8'd255-value;
+   lift_room=value<headroom?value:headroom;
+   strong_lift=value<(headroom>>1)?value:(headroom>>1);
+   expanded=level==4 ? ($signed({3'd0,value})<<<1)-11'sd128:
+       $signed({3'd0,value})+$signed({4'd0,value[7:1]})-11'sd64;
+   case(level)
+    0:contrast_input=value+strong_lift;
+    1:contrast_input=value+(lift_room>>1);
+    3,4:contrast_input=expanded<0?8'd0:expanded>255?8'd255:expanded[7:0];
+    default:contrast_input=value;
+   endcase
+  end
+ endfunction
+ wire [7:0] tone_input=contrast_input(adjusted_luma,clear_level);
  wire [7:0] mapped;
- display_tone_rom u_tone(.clk(clk),.addr({keep_legacy,shadow_level,adjusted_luma}),.data(mapped));
+ display_tone_rom u_tone(.clk(clk),.addr({keep_legacy,shadow_level,tone_input}),.data(mapped));
  reg [23:0] rgb_d;
  reg [7:0] min_d,max_d;
  reg [7:0] luma_d;
@@ -153,7 +173,7 @@ endmodule
 // One synchronous ROM read occupies the original first pixel stage; no extra
 // video latency. All 8 x 256 table values are generated and exhaustively tested.
 module display_tone_rom(input clk,input [11:0] addr,output [7:0] data);
- localparam INIT_FILE="D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v11_sensor_window_fix/user_source/hdl_source/display_tone.dat";
+ localparam INIT_FILE="D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/display_tone.dat";
 `ifdef __ICARUS__
  reg [7:0] memory[0:4095];reg [7:0] q;
  initial $readmemb(INIT_FILE,memory);

@@ -1,0 +1,16 @@
+[
+  {
+    "run": "phy_seed2",
+    "pid": 36840,
+    "reason": "Routing stagnated after 30 iterations at >99.5 percent slice utilization; intentionally stopped, not a completed pass",
+    "start": "2026-11-02T22:31:03.0355286+08:00",
+    "stopped": "2026-11-03T09:28:22.8299025+08:00"
+  },
+  {
+    "run": "phy_seed3",
+    "pid": 30536,
+    "reason": "Routing stagnated after 30 iterations at >99.5 percent slice utilization; intentionally stopped, not a completed pass",
+    "start": "2026-11-02T22:58:28.0411458+08:00",
+    "stopped": "2026-11-03T09:28:22.8532251+08:00"
+  }
+]

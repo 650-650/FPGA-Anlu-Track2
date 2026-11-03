@@ -1,0 +1,27 @@
+# do D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/sketch_rom/run_gate_rom.do
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 10:16:42 on Nov 03,2026
+# vlog -sv D:/anlu/TD_6.2.1_Engineer_6.2.168.116/sim_release/ph1p/ph1p_phy_eram_v2.v D:/anlu/TD_6.2.1_Engineer_6.2.168.116/sim_release/ph1p/ph1p_phy_gsr.v D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/sketch_rom/gate_rom_pair_models.v D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/sketch_rom/sketch_rom_gate_tb.sv 
+# -- Compiling module PH1P_PHY_ERAM_V2
+# -- Compiling module PH1P_PHY_GSR
+# -- Compiling module gate_ink_rom_pair_01
+# -- Compiling module gate_ink_rom_pair_23
+# -- Compiling module sketch_rom_gate_tb
+# 
+# Top level modules:
+# 	sketch_rom_gate_tb
+# End time: 10:16:42 on Nov 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -do "D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/sketch_rom/run_gate_rom.do" -l D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/sketch_rom/gate_rom_modelsim.log 
+# Start time: 10:16:42 on Nov 03,2026
+# Loading sv_std.std
+# Loading work.sketch_rom_gate_tb
+# Loading work.gate_ink_rom_pair_01
+# Loading work.PH1P_PHY_ERAM_V2
+# Loading work.gate_ink_rom_pair_23
+# Loading work.PH1P_PHY_GSR
+# GATE_PHYSICAL_ROM_PASS checks=8676 entries=2048 ports=4 levels5_7_default=1 one_clock_read=1 CE_hold=1
+# ** Note: $finish    : D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/sketch_rom/sketch_rom_gate_tb.sv(33)
+#    Time: 21790 ns  Iteration: 1  Instance: /sketch_rom_gate_tb
+# Break in Module sketch_rom_gate_tb at D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/sketch_rom/sketch_rom_gate_tb.sv line 33
+# Stopped at D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/sketch_rom/sketch_rom_gate_tb.sv line 33

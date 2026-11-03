@@ -1,0 +1,5 @@
+ASYNC_CLOCKS sys=250ns camera=110ns ddr=70ns hdmi=90ns
+COLLISION_COMPLETE_STATE pending=1 seq=2 valid=0 id=0
+CASE_PASS late_old_verdict_cannot_replace_new_full_frame_completion
+LATENCY_V12_UNIT_PASS cases=1 checks=5
+D:\FPGA_Work\AnlogicCup2026\07_stylize_flame_fusion_v16_scene_levels_latency\validation\latency_provenance_unit\tb.sv:253: $finish called at 31590000 (1ps)

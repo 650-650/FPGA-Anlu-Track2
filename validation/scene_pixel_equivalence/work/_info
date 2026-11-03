@@ -1,0 +1,681 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence
+vdisplay_contrast
+Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+Z2 !s110 1793671942
+!i10b 1
+!s100 4Mm?Ej5>96E=ledcgUc`g3
+IAR@oh:zU3I]nBeYTd___?2
+Z3 V`JN@9S9cnhjKRR_L]QIcM3
+Z4 !s105 display_contrast_v_unit
+S1
+R0
+Z5 w1793621912
+Z6 8D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/display_contrast.v
+Z7 FD:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/display_contrast.v
+L0 3
+Z8 OV;L;10.3c;59
+r1
+!s85 0
+31
+Z9 !s108 1793671942.408000
+Z10 !s107 D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/scene_display_equivalence_tb.sv|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/scene_style_equivalence_tb.sv|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_stylize_v5_96.v|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_style_guide_v8.v|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_display_contrast.v|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/teammate_stylize_v5_96.v|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/teammate_style_guide_v8.v|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/teammate_display_contrast.v|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/display_contrast.v|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/style_guide_v8.v|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v|
+Z11 !s90 -sv|+define+__ICARUS__|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/style_guide_v8.v|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/display_contrast.v|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/teammate_display_contrast.v|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/teammate_style_guide_v8.v|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/teammate_stylize_v5_96.v|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_display_contrast.v|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_style_guide_v8.v|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_stylize_v5_96.v|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/scene_style_equivalence_tb.sv|D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/scene_display_equivalence_tb.sv|
+!i113 1
+o-sv
+Z12 !s92 -sv +define+__ICARUS__
+vdisplay_tone_rom
+R1
+R2
+!i10b 1
+!s100 NLd3EiUT=HC?N<f^3e@eO2
+I9FN]390=1AcSVYR5Y9nbz3
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+Z13 L0 175
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vmedian4_eram
+R1
+R2
+!i10b 1
+!s100 FjPi0;_;W=`DSZd`11XiE1
+ISA04BzZCYk8@8_nK<=4TE3
+R3
+Z14 !s105 stylize_v5_96_v_unit
+S1
+R0
+Z15 w1793671920
+Z16 8D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v
+Z17 FD:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v
+L0 680
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vmedian_majority_pair_rom
+R1
+R2
+!i10b 1
+!s100 HJkjdLi8=f5mLCcN_S5OK1
+IddBha68Uga@2gMO<W]]K^3
+R3
+R14
+S1
+R0
+R15
+R16
+R17
+L0 703
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vreference_display_contrast
+R1
+R2
+!i10b 1
+!s100 gLcHEodTbzO31HD_kT?4n3
+I9Oj4CHPMXZ<SA2<<9N5b10
+R3
+Z18 !s105 reference_display_contrast_v_unit
+S1
+R0
+Z19 w1793622014
+Z20 8D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_display_contrast.v
+Z21 FD:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_display_contrast.v
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vreference_display_tone_rom
+R1
+R2
+!i10b 1
+!s100 `k@mchWSbMSiFBkFiI]4<2
+I_EfzmXDYO5Fl5aA>L>3mz2
+R3
+R18
+S1
+R0
+R19
+R20
+R21
+L0 155
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vreference_median4_eram
+R1
+R2
+!i10b 1
+!s100 B0TZ5?EX=L0[?U[W7@Dm82
+Ie720Mi9JRLfOE@l@_bZ^^1
+R3
+Z22 !s105 reference_stylize_v5_96_v_unit
+S1
+R0
+R19
+Z23 8D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_stylize_v5_96.v
+Z24 FD:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_stylize_v5_96.v
+L0 611
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vreference_median_majority_pair_rom
+R1
+R2
+!i10b 1
+!s100 Zd3:1iD[hTO:0HEa77`TA1
+I3LXV;GalNUATh:_C^2J7F3
+R3
+R22
+S1
+R0
+R19
+R23
+R24
+L0 634
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vreference_sty_bypass_memory
+R1
+R2
+!i10b 1
+!s100 7eS]meIkDc6MgG1OZ0j_n1
+I=2:=1mm2:SkXYN[c]Rh5G1
+R3
+R22
+S1
+R0
+R19
+R23
+R24
+L0 602
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vreference_sty_win3_96
+R1
+R2
+!i10b 1
+!s100 BGG]82hb<e0`SaRLnI?el2
+IU9?a`B86LWR8:SNPATRAe0
+R3
+R22
+S1
+R0
+R19
+R23
+R24
+L0 513
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vreference_style_guide_v8
+R1
+R2
+!i10b 1
+!s100 Beb@KaX4eVMhVdUK;9>`C2
+IZTMM6:4P9AjHB?R]_mfUJ1
+R3
+!s105 reference_style_guide_v8_v_unit
+S1
+R0
+R19
+8D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_style_guide_v8.v
+FD:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_style_guide_v8.v
+L0 5
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vreference_stylize_v5_96
+R1
+R2
+!i10b 1
+!s100 T<P]kL9i>LM`k8Vi[Kd0E3
+I`CE4mgNIWN<P;57<=3[Ub3
+R3
+R22
+S1
+R0
+R19
+R23
+R24
+L0 6
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vscene_display_equivalence_tb
+R1
+R2
+!i10b 1
+!s100 @86KoVe13<l3k4]g_?Rh:0
+IdIm`HMnMbK0MSJ5k4O`VL3
+R3
+!s105 scene_display_equivalence_tb_sv_unit
+S1
+R0
+R19
+8D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/scene_display_equivalence_tb.sv
+FD:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/scene_display_equivalence_tb.sv
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vscene_style_equivalence_tb
+R1
+R2
+!i10b 1
+!s100 czD5hj;M_0o7HNVXDb<Kh0
+I?J[^?c61eSKCWi1WMP4Ol1
+R3
+!s105 scene_style_equivalence_tb_sv_unit
+S1
+R0
+R19
+8D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/scene_style_equivalence_tb.sv
+FD:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/scene_style_equivalence_tb.sv
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vscene_style_production_width_tb
+R1
+!s110 1793672089
+!i10b 1
+!s100 Jldb1:bfhNe=EQ:j@d=R^0
+I9J1AXAD>8T5HeKOXFZ9Rg2
+R3
+!s105 scene_style_production_width_tb_sv_unit
+S1
+R0
+w1793622198
+8scene_style_production_width_tb.sv
+Fscene_style_production_width_tb.sv
+L0 2
+R8
+r1
+!s85 0
+31
+!s108 1793672089.320000
+!s107 scene_style_production_width_tb.sv|
+!s90 -sv|scene_style_production_width_tb.sv|
+!i113 1
+o-sv
+vsketch_ink_pair_rom_v16
+R1
+R2
+!i10b 1
+!s100 ;k2fe]m5HTKgYzkf]AhGI1
+I6k[T?O^1e?oJ_<gokXc3B3
+R3
+R14
+S1
+R0
+R15
+R16
+R17
+L0 719
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vsty_bypass_memory
+R1
+R2
+!i10b 1
+!s100 <FJcjb_a11SA>oLXNJ<Fh3
+I?YnfkXj`zUNjlUmO7>^;=1
+R3
+R14
+S1
+R0
+R15
+R16
+R17
+L0 671
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vsty_win3_96
+R1
+R2
+!i10b 1
+!s100 a[8Yo@^k]zg9KNZzF<V003
+IWdM6@ozYLUalg_kUkY6HW2
+R3
+R14
+S1
+R0
+R15
+R16
+R17
+L0 582
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vstyle_guide_v8
+R1
+R2
+!i10b 1
+!s100 ?YQldn^]>PokBfFC_NOgc3
+I_[k_n=ljNhE526=Z`[M:^2
+R3
+!s105 style_guide_v8_v_unit
+S1
+R0
+R5
+8D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/style_guide_v8.v
+FD:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/style_guide_v8.v
+L0 5
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vstylize_v5_96
+R1
+R2
+!i10b 1
+!s100 M]=`O^jzhd>8^hY`V;Z]62
+IUcefZhO]`O559RV?BobVL1
+R3
+R14
+S1
+R0
+R15
+R16
+R17
+L0 6
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vteammate_display_contrast
+R1
+R2
+!i10b 1
+!s100 >j]iBCYKb?lj]UGdFJhzE0
+IBf4Ii427Ml01LD0feccTc2
+R3
+Z25 !s105 teammate_display_contrast_v_unit
+S1
+R0
+R19
+Z26 8D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/teammate_display_contrast.v
+Z27 FD:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/teammate_display_contrast.v
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vteammate_display_tone_rom
+R1
+R2
+!i10b 1
+!s100 8T@9XLaHh?@GM8M2jkN`]3
+I9Z5QMgB^IhCC>UzH=O<bN3
+R3
+R25
+S1
+R0
+R19
+R26
+R27
+R13
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vteammate_median4_eram
+R1
+R2
+!i10b 1
+!s100 oDDD<`f07_[iBUYmC5U8X3
+IS`6mY8XKoP<LZAUE=7<6o0
+R3
+Z28 !s105 teammate_stylize_v5_96_v_unit
+S1
+R0
+R19
+Z29 8D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/teammate_stylize_v5_96.v
+Z30 FD:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/teammate_stylize_v5_96.v
+L0 613
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vteammate_median_majority_pair_rom
+R1
+R2
+!i10b 1
+!s100 j2JE=jYF[=dOmX74k?Lf=3
+ICYEzhhhh8i=7mn158>Z9X0
+R3
+R28
+S1
+R0
+R19
+R29
+R30
+L0 636
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vteammate_sty_bypass_memory
+R1
+R2
+!i10b 1
+!s100 h`C=NhCznV18E9R>X2XZU1
+Ii_MS_EQQQQ`^e=F4UM>EA3
+R3
+R28
+S1
+R0
+R19
+R29
+R30
+L0 604
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vteammate_sty_win3_96
+R1
+R2
+!i10b 1
+!s100 no[dA>48Cd<:ZL_0Di_^71
+Iofn:CE[dPj]lUJm_RETBS2
+R3
+R28
+S1
+R0
+R19
+R29
+R30
+L0 523
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vteammate_style_guide_v8
+R1
+R2
+!i10b 1
+!s100 fU:WoHFoJ_nj72BJJIEg22
+I5;;i@6W<Re0K[b<kL>h;@0
+R3
+!s105 teammate_style_guide_v8_v_unit
+S1
+R0
+R19
+8D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/teammate_style_guide_v8.v
+FD:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/teammate_style_guide_v8.v
+L0 5
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12
+vteammate_stylize_v5_96
+R1
+R2
+!i10b 1
+!s100 6bkmA_:OjOZ[TPig18>3m0
+IfHzYJI0R:MMm8]5FOHCG?3
+R3
+R28
+S1
+R0
+R19
+R29
+R30
+L0 6
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12

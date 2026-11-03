@@ -17,9 +17,20 @@ module video_out (
     input wire        I_dsi_clk,
     input wire        I_video_vsync,
     input wire        I_video_rd_en,  
-    output reg[23:0]  O_vdieo_data
+    output reg[23:0]  O_vdieo_data,
+    output wire O_observe_read_start,
+    output wire [1:0] O_observe_read_slot,
+    output wire O_observe_fifo_reset,
+    output wire O_observe_underflow
 );
 
+    assign O_observe_read_start=S_video_frame_start;
+    assign O_observe_read_slot=I_video_out_rp;
+    // Legacy observer port name: any return discarded by this FIFO is unsafe,
+    // both during reset and at FULL. This signal feeds ONLY the passive
+    // latency observer; the FIFO reset, read triggers and pixels are unchanged.
+    assign O_observe_fifo_reset=S_fifo_rst || S_fifo_full;
+    assign O_observe_underflow=S_fifo_rd_en && S_fifo_emtpy;
     reg         S_fifo_rst;     
     reg[7:0]    S_fifo_rst_cnt;
     wire[8:0]   S_fifo_wr_num;       
@@ -36,7 +47,8 @@ module video_out (
     reg         S_video_rd_en_1d;
     reg[3:0]    S_fifo_rd_cnt_1d;     
     reg[127:0]  S_fifo_rd_data_1d;    
-	wire        S_fifo_emtpy;     
+	wire        S_fifo_emtpy;
+    wire        S_fifo_full;
 
 
 
@@ -46,10 +58,20 @@ module video_out (
     localparam IMAGE_BASE_ADDR_3 = 25'd21000000;
 
 
-    always @(posedge I_ddr_clk) begin
-        S_video_vsync_1d <= I_video_vsync;
-        S_video_vsync_2d <=S_video_vsync_1d;
-        S_video_vsync_3d <= S_video_vsync_2d;
+    // The input is the inverse of the positive VTC VS, so its idle level is
+    // one. Starting these synchronizers at zero manufactures a read-frame
+    // event before the first real VS falling edge when DDR starts late.
+    // That extra generation permanently desynchronizes frame provenance.
+    always @(posedge I_ddr_clk or negedge I_rst_n) begin
+        if(!I_rst_n)begin
+            S_video_vsync_1d <= 1'b1;
+            S_video_vsync_2d <= 1'b1;
+            S_video_vsync_3d <= 1'b1;
+        end else begin
+            S_video_vsync_1d <= I_video_vsync;
+            S_video_vsync_2d <= S_video_vsync_1d;
+            S_video_vsync_3d <= S_video_vsync_2d;
+        end
     end
 
     assign S_video_frame_start = ~S_video_vsync_3d & S_video_vsync_2d;
@@ -142,7 +164,7 @@ module video_out (
         .di         ( I_ddr_user_rd_data  ),
         .wrusedw    ( S_fifo_wr_num       ),
         .afull      (),
-        .full_flag  (),
+        .full_flag  ( S_fifo_full        ),
  
         .clkr       ( I_dsi_clk           ),
         .re         ( S_fifo_rd_en        ), 

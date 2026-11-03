@@ -1,0 +1,34 @@
+{
+  "production_sha256": {
+    "user_source/hdl_source/isp/isp_top.v": "653053dc53407cd9be226dc8b0a242f242b8a1887fea4dbdc094b3120e4ed034",
+    "user_source/hdl_source/isp/stylize_v5_96.v": "72a26a350f1c7089bd49503378c0d04ec3b92d7fd808563b13d548915b4009aa",
+    "user_source/hdl_source/isp/style_guide_v8.v": "04fe445a64701487d964176af439c8bcb51f2b115b9de5d45fa32585087fb5db",
+    "user_source/hdl_source/display_contrast.v": "72a4ade832f582062dd7aaf58afa55ea7bbdc1cf6ba67a08b9011fef047621ab",
+    "user_source/hdl_source/display_tone.dat": "1a0b66199b2a41ab137efbc1a9af1e0c649c27ef85b5bdce83968edc3715f4f5"
+  },
+  "reference_v15": "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v15_ddr_latency_final",
+  "reference_teammate": "D:\\Project\\FPGA_Work\\zuizhongbanben_wrh\\07_stylize_flame_fusion_v14_scene_params_LYK",
+  "baseline_input_sha256": {
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v15_ddr_latency_final\\user_source\\hdl_source\\isp\\stylize_v5_96.v": "5764eb260c98f7deb2c7d132e3c20740d689dc654f5eeb065beacbe7ef514beb",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v15_ddr_latency_final\\user_source\\hdl_source\\isp\\style_guide_v8.v": "188de37b96d2880f85f7b706b706d0ff978c54bf9494bfb9d00faee21b923f68",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v15_ddr_latency_final\\user_source\\hdl_source\\display_contrast.v": "413a51d5e295b19281963e3d8d64132ae11706161756a206c63f975903f132ab",
+    "D:\\Project\\FPGA_Work\\zuizhongbanben_wrh\\07_stylize_flame_fusion_v14_scene_params_LYK\\user_source\\hdl_source\\isp\\stylize_v5_96.v": "7b5f58fea856247ce3eaaacb2be0587579acd6c8f95741029fd95c836ee262b6",
+    "D:\\Project\\FPGA_Work\\zuizhongbanben_wrh\\07_stylize_flame_fusion_v14_scene_params_LYK\\user_source\\hdl_source\\isp\\style_guide_v8.v": "0c21a746fc563177a34a5e0ce0257e7659026180928676637ecb1842c1bc7c64",
+    "D:\\Project\\FPGA_Work\\zuizhongbanben_wrh\\07_stylize_flame_fusion_v14_scene_params_LYK\\user_source\\hdl_source\\display_contrast.v": "413dd5bd67f913fcc85a64049d203b1c6401fc58d5551df0da18d21fcdedeecf",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v15_ddr_latency_final\\user_source\\hdl_source\\display_tone.dat": "1a0b66199b2a41ab137efbc1a9af1e0c649c27ef85b5bdce83968edc3715f4f5",
+    "D:\\Project\\FPGA_Work\\zuizhongbanben_wrh\\07_stylize_flame_fusion_v14_scene_params_LYK\\user_source\\hdl_source\\display_tone.dat": "1a0b66199b2a41ab137efbc1a9af1e0c649c27ef85b5bdce83968edc3715f4f5"
+  },
+  "validation_sha256": {
+    "reference_display_contrast.v": "40e8709a539e6d14eca4dc305f1416d079417542333c334a3e36e96ab37b5ee5",
+    "reference_style_guide_v8.v": "cc1263282d2d0b2a855e94d2ddcdab9b78bf60ccfea4451dd646e99b197c1cac",
+    "reference_stylize_v5_96.v": "14b1d2c003fad0fb47ecd0621dd0fcb455e26dd2a80c3617edde2df41eda1e0e",
+    "run_scene_pixels.do": "258ab3e338f8a0d1779a4f22e117868989f532a32a6feb09011a4f04df3bc912",
+    "run_scene_production_width.do": "0eff7cb491025372b1d2bb4232dc90a9ae963909cd9f435bee8e74cb7051ff55",
+    "scene_display_equivalence_tb.sv": "ea2edfa3271fb6dc4dd37db812b03cf3c2792994071f5e14f7d95e3dc16a53b3",
+    "scene_style_equivalence_tb.sv": "9c758a4755743fde619f48e98d060bc27d6d759ea1da3f7e0a0a85075617b9b6",
+    "scene_style_production_width_tb.sv": "8975b86909fe69d25083fc97e32ac5feb419a14f41e3b9218fd7e685f3c00b5d",
+    "teammate_display_contrast.v": "dee487397b342a728f47006ebee2d2510456a537daae9816f3995758124f0318",
+    "teammate_style_guide_v8.v": "7e523ebd63fd6f296acabdf57b179931ba34bd05cbf4e3614a1a5a1161154789",
+    "teammate_stylize_v5_96.v": "92996e103b518e27a2646ad5f5bcb7068e51567073b9b6138bf7ec87c411a638"
+  }
+}

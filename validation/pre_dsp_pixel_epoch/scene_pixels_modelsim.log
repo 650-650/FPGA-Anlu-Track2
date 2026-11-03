@@ -1,0 +1,207 @@
+# do run_scene_pixels.do
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 20:20:16 on Nov 02,2026
+# vlog -sv "+define+__ICARUS__" D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/style_guide_v8.v D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/display_contrast.v D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/teammate_display_contrast.v D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/teammate_style_guide_v8.v D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/teammate_stylize_v5_96.v D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_display_contrast.v D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_style_guide_v8.v D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_stylize_v5_96.v D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/scene_style_equivalence_tb.sv D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/scene_display_equivalence_tb.sv 
+# -- Compiling module stylize_v5_96
+# -- Compiling module sty_win3_96
+# -- Compiling module sty_bypass_memory
+# -- Compiling module median4_eram
+# -- Compiling module median_majority_pair_rom
+# -- Compiling module style_guide_v8
+# -- Compiling module display_contrast
+# -- Compiling module display_tone_rom
+# -- Compiling module teammate_display_contrast
+# -- Compiling module teammate_display_tone_rom
+# -- Compiling module teammate_style_guide_v8
+# -- Compiling module teammate_stylize_v5_96
+# -- Compiling module teammate_sty_win3_96
+# -- Compiling module teammate_sty_bypass_memory
+# -- Compiling module teammate_median4_eram
+# -- Compiling module teammate_median_majority_pair_rom
+# -- Compiling module reference_display_contrast
+# -- Compiling module reference_display_tone_rom
+# -- Compiling module reference_style_guide_v8
+# -- Compiling module reference_stylize_v5_96
+# -- Compiling module reference_sty_win3_96
+# -- Compiling module reference_sty_bypass_memory
+# -- Compiling module reference_median4_eram
+# -- Compiling module reference_median_majority_pair_rom
+# -- Compiling module scene_style_equivalence_tb
+# -- Compiling module scene_display_equivalence_tb
+# 
+# Top level modules:
+# 	median4_eram
+# 	teammate_median4_eram
+# 	reference_median4_eram
+# 	scene_style_equivalence_tb
+# 	scene_display_equivalence_tb
+# End time: 20:20:16 on Nov 02,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -do "run_scene_pixels.do" -l scene_pixels_modelsim.log 
+# Start time: 20:20:16 on Nov 02,2026
+# Loading sv_std.std
+# Loading work.scene_style_equivalence_tb
+# Loading work.reference_stylize_v5_96
+# Loading work.reference_sty_bypass_memory
+# Loading work.reference_sty_win3_96
+# Loading work.stylize_v5_96
+# Loading work.sty_bypass_memory
+# Loading work.sty_win3_96
+# Loading work.teammate_stylize_v5_96
+# Loading work.teammate_sty_bypass_memory
+# Loading work.teammate_sty_win3_96
+# Loading work.reference_style_guide_v8
+# Loading work.style_guide_v8
+# Loading work.teammate_style_guide_v8
+# ** Warning: (vsim-3017) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Too few port connections. Expected 16, found 12.
+# 
+#         Region: /scene_style_equivalence_tb/presets[0]/dut/u_win_a
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Missing connection for port 'pre_v'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Missing connection for port 'pre_top'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Missing connection for port 'pre_mid'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Missing connection for port 'pre_bot'.
+# 
+# ** Warning: (vsim-3017) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Too few port connections. Expected 16, found 12.
+# 
+#         Region: /scene_style_equivalence_tb/presets[0]/dut/u_win_b
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Missing connection for port 'pre_v'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Missing connection for port 'pre_top'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Missing connection for port 'pre_mid'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Missing connection for port 'pre_bot'.
+# 
+# ** Warning: (vsim-3017) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Too few port connections. Expected 16, found 12.
+# 
+#         Region: /scene_style_equivalence_tb/presets[1]/dut/u_win_a
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Missing connection for port 'pre_v'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Missing connection for port 'pre_top'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Missing connection for port 'pre_mid'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Missing connection for port 'pre_bot'.
+# 
+# ** Warning: (vsim-3017) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Too few port connections. Expected 16, found 12.
+# 
+#         Region: /scene_style_equivalence_tb/presets[1]/dut/u_win_b
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Missing connection for port 'pre_v'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Missing connection for port 'pre_top'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Missing connection for port 'pre_mid'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Missing connection for port 'pre_bot'.
+# 
+# ** Warning: (vsim-3017) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Too few port connections. Expected 16, found 12.
+# 
+#         Region: /scene_style_equivalence_tb/presets[2]/dut/u_win_a
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Missing connection for port 'pre_v'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Missing connection for port 'pre_top'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Missing connection for port 'pre_mid'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Missing connection for port 'pre_bot'.
+# 
+# ** Warning: (vsim-3017) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Too few port connections. Expected 16, found 12.
+# 
+#         Region: /scene_style_equivalence_tb/presets[2]/dut/u_win_b
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Missing connection for port 'pre_v'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Missing connection for port 'pre_top'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Missing connection for port 'pre_mid'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Missing connection for port 'pre_bot'.
+# 
+# ** Warning: (vsim-3017) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Too few port connections. Expected 16, found 12.
+# 
+#         Region: /scene_style_equivalence_tb/presets[3]/dut/u_win_a
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Missing connection for port 'pre_v'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Missing connection for port 'pre_top'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Missing connection for port 'pre_mid'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Missing connection for port 'pre_bot'.
+# 
+# ** Warning: (vsim-3017) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Too few port connections. Expected 16, found 12.
+# 
+#         Region: /scene_style_equivalence_tb/presets[3]/dut/u_win_b
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Missing connection for port 'pre_v'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Missing connection for port 'pre_top'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Missing connection for port 'pre_mid'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Missing connection for port 'pre_bot'.
+# 
+# ** Warning: (vsim-3017) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Too few port connections. Expected 16, found 12.
+# 
+#         Region: /scene_style_equivalence_tb/presets[4]/dut/u_win_a
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Missing connection for port 'pre_v'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Missing connection for port 'pre_top'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Missing connection for port 'pre_mid'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(154): [TFMPC] - Missing connection for port 'pre_bot'.
+# 
+# ** Warning: (vsim-3017) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Too few port connections. Expected 16, found 12.
+# 
+#         Region: /scene_style_equivalence_tb/presets[4]/dut/u_win_b
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Missing connection for port 'pre_v'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Missing connection for port 'pre_top'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Missing connection for port 'pre_mid'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/user_source/hdl_source/isp/stylize_v5_96.v(218): [TFMPC] - Missing connection for port 'pre_bot'.
+# 
+# ** Warning: (vsim-3017) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_stylize_v5_96.v(148): [TFMPC] - Too few port connections. Expected 16, found 12.
+# 
+#         Region: /scene_style_equivalence_tb/reference/u_win_a
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_stylize_v5_96.v(148): [TFMPC] - Missing connection for port 'pre_v'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_stylize_v5_96.v(148): [TFMPC] - Missing connection for port 'pre_top'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_stylize_v5_96.v(148): [TFMPC] - Missing connection for port 'pre_mid'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_stylize_v5_96.v(148): [TFMPC] - Missing connection for port 'pre_bot'.
+# 
+# ** Warning: (vsim-3017) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_stylize_v5_96.v(212): [TFMPC] - Too few port connections. Expected 16, found 12.
+# 
+#         Region: /scene_style_equivalence_tb/reference/u_win_b
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_stylize_v5_96.v(212): [TFMPC] - Missing connection for port 'pre_v'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_stylize_v5_96.v(212): [TFMPC] - Missing connection for port 'pre_top'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_stylize_v5_96.v(212): [TFMPC] - Missing connection for port 'pre_mid'.
+# 
+# ** Warning: (vsim-3722) D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/reference_stylize_v5_96.v(212): [TFMPC] - Missing connection for port 'pre_bot'.
+# 
+# SCENE_STYLE_EQUIVALENCE_PASS checks=923241
+# ** Note: $finish    : D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/scene_style_equivalence_tb.sv(136)
+#    Time: 867840 ns  Iteration: 1  Instance: /scene_style_equivalence_tb
+# Break in Module scene_style_equivalence_tb at D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/scene_style_equivalence_tb.sv line 136
+# Stopped at D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/scene_style_equivalence_tb.sv line 136
+# vsim 
+# Start time: 20:23:23 on Nov 02,2026
+# Loading sv_std.std
+# Loading work.scene_display_equivalence_tb
+# Loading work.reference_display_contrast
+# Loading work.reference_display_tone_rom
+# Loading work.display_contrast
+# Loading work.display_tone_rom
+# Loading work.teammate_display_contrast
+# Loading work.teammate_display_tone_rom
+# SCENE_DISPLAY_EQUIVALENCE_PASS checks=26068
+# ** Note: $finish    : D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/scene_display_equivalence_tb.sv(79)
+#    Time: 32340 ns  Iteration: 1  Instance: /scene_display_equivalence_tb
+# Break in Module scene_display_equivalence_tb at D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/scene_display_equivalence_tb.sv line 79
+# Stopped at D:/FPGA_Work/AnlogicCup2026/07_stylize_flame_fusion_v16_scene_levels_latency/validation/scene_pixel_equivalence/scene_display_equivalence_tb.sv line 79

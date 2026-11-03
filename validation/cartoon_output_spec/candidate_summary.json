@@ -1,0 +1,32 @@
+{
+  "ready_for_mainline_trial": true,
+  "candidate_sha256": "9cd255e36f5625e611510695fa783e1cc9e78c00f348cde977534222ac04d7c4",
+  "baseline_sha256": "811810da14ab2e86fe921feb5a2801b4c082a95c9de7cf147d20c68a9d4d892a",
+  "math_checks": 1048576,
+  "full_pixel_checks": 1305243,
+  "checks_total": 2353819,
+  "resource_delta_SYN_only": {
+    "slice_estimate": -147,
+    "lut_total": -292,
+    "lut6": -169,
+    "slice_reg": 0,
+    "eram": 0,
+    "dsp": 0
+  },
+  "outside_cartoon_colour_byte_exact": true,
+  "gamut_prefix_byte_exact": true,
+  "registers_clocks_ROM_parameters_byte_exact": true,
+  "evidence_sha256": {
+    "output_math_result.json": "9aa0000301dca70f65ffbd85a27aa50819b267b2208ff6c2732c7b3b2fb956c1",
+    "math_run.log": "62255d2938199b87bd443d1441ac8ef4f7ceb106f5f1d25553bfcf42c2a2c065",
+    "result.json": "bb6ee2af510d9454c8afeb09a419d802d31cff26002ed3e27dda6e13ddd8cf29",
+    "rom_pixels_modelsim.log": "b14d87caec4acbcadb746a4eef926ede4edfac88e4ceaa9ec36e93a8fcc3b4a3",
+    "td_probe/result.json": "83a18984ef2f2d64effa627bb81bc43c156fb4e69a9a2e9a793970853d560144",
+    "cartoon_output_bypass.patch": "145eb513b16138bf13e644e92c3fb986369b6e5be9d5e8627ccc8bbc01296c58"
+  },
+  "PHY_run_in_candidate": false,
+  "limits": [
+    "Known binary values only; arbitrary X/Z propagation is not claimed equivalent.",
+    "SYN estimate does not establish PHY fit, routing, STA or board acceptance."
+  ]
+}

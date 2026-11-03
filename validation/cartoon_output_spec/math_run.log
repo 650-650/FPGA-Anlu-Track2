@@ -1,0 +1,2 @@
+CARTOON_OUTPUT_BYPASS_EQ_PASS checks=1048576 colours=256 levels=8 edge_states=2 magnitudes=256
+.\cartoon_output_math_tb.sv:34: $finish called at 0 (1ps)

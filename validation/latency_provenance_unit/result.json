@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "cases": 32,
+  "checks": 172,
+  "source_sha256": {
+    "user_source/hdl_source/frame_latency_monitor.v": "55514b88411e3df3f0d6ce6de3806a534749bad138cd6a688c8065a45ee4ff39",
+    "user_source/hdl_source/fusion_controls.v": "5c9d6912c53ff44cdc4a2b334ea53d6adefdb20f551bb107e5b936b03a149aa9"
+  },
+  "testbench_sha256": "51e097dd058663772c7a2f5af17c7946be8589daf251b09e85c2c6135bc1cf80",
+  "verifier_sha256": "104c24664b5d51ac2fba7eb9da7ddfc64100a77d9e18ce9a88779fa4e84b68da",
+  "scope": "Timestamp provenance validity, separately from RAW image-quality counters.\n\nThree former RAW-quality rejection fixtures still have a full, ordered DDR\nframe and the same first-pixel origin. They must report the independently\nmeasured age. All transport/metadata/overwrite/underflow rejections remain.\n",
+  "intentional_changes": {
+    "source_frame(0,RG-1,DW,0);show(0,1,0,0,0);case_pass(\"partial_RAW_invalid\")": "source_frame(0,RG-1,DW,0);show(0,1,1,0,0);case_pass(\"RAW_count_short_full_DDR_has_same_first_pixel_time\")",
+    "source_frame(0,RG+1,DW,0);show(0,1,0,0,0);case_pass(\"extra_RAW_invalid\")": "source_frame(0,RG+1,DW,0);show(0,1,1,0,0);case_pass(\"RAW_count_extra_full_DDR_has_same_first_pixel_time\")",
+    "source_frame(0,RG,DW,1);show(0,1,0,0,0);case_pass(\"RAW_error_invalid\")": "source_frame(0,RG,DW,1);show(0,1,1,0,0);case_pass(\"RAW_quality_error_does_not_change_timestamp_origin\")"
+  },
+  "source_unchanged": true,
+  "measurement_valid_means": "Known first RAW-group timestamp is tied to the actual full ordered DDR slot generation, complete read and final HDMI frame. Does not certify RAW payload quality."
+}

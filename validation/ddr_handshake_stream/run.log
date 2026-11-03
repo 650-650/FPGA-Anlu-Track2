@@ -1,0 +1,11 @@
+CASE_PASS old_wrapper_loses_one_AR old_outstanding=1 new_outstanding=0 observed_idle_clocks=4096
+CASE_PASS AW_first_no_duplicate
+CASE_PASS W_first_no_duplicate
+CASE_PASS AR_independent_of_write_ready
+CASE_PASS common_ready_cycle_equivalence transactions=5000 compared_clocks=6510
+CASE_PASS delayed_calibration_queued_transactions=256
+CASE_PASS reset_clears_partial_AW_and_fifo
+CASE_PASS reset_clears_partial_W_and_fifo
+CASE_PASS random_independent_ready transactions=50000 commands=50000 writes=32353 reads=17647 stable_checks=89066
+DDR_HANDSHAKE_PASS cases=9
+D:\FPGA_Work\AnlogicCup2026\07_stylize_flame_fusion_v16_scene_levels_latency\validation\ddr_handshake_stream\tb.sv:235: $finish called at 2176545000 (1ps)

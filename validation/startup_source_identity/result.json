@@ -1,0 +1,249 @@
+{
+  "pass": true,
+  "cases": 29,
+  "identity_and_timestamp_checks": 1099942,
+  "source_sha256": {
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\validation\\startup_source_identity\\tb.sv": "a4b4cf6ab6619589ecd78a07d9c2c3a62429db76bbae82ff294087f448863cfc",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\video_in.v": "f0f6e4f09a5070b99543abc2d593d87751b1dac47e905402058e492fc8dfc229",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\frame_latency_monitor.v": "55514b88411e3df3f0d6ce6de3806a534749bad138cd6a688c8065a45ee4ff39",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\fusion_controls.v": "5c9d6912c53ff44cdc4a2b334ea53d6adefdb20f551bb107e5b936b03a149aa9",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\ip_source\\w128_d512_fifo\\w128_d512_fifo.v": "5cd5f8e2216dd8989dc1e54d42b4da348dbb09f130bbe92deaa205db53a96bb4",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\ip_source\\w128_d512_fifo\\soft_fifo_al_4057d6b76aa6.v": "8218d772fba069f8c0c6333712c990b8417a447de7f3e73aff7cd342200ba751"
+  },
+  "verifier_sha256": "dfb88b91a8dac52025bf7d1c63b43e9f3932ca95a1f22d2d17a84cb27bfb7c32",
+  "results": [
+    {
+      "mode": 0,
+      "ddr_half_ps": 7500,
+      "phase_ps": 0,
+      "checks": 44020,
+      "pass": true,
+      "log_sha256": "7e0e2b2115d7f061ed9022f3ff4d418ff4e35497a14eedeeb7c874b0effe5073"
+    },
+    {
+      "mode": 1,
+      "ddr_half_ps": 7500,
+      "phase_ps": 0,
+      "checks": 36264,
+      "pass": true,
+      "log_sha256": "a0409402b59ea9e4e927d9876b24acf68b085ab29216481bfd25fd3af104b336"
+    },
+    {
+      "mode": 2,
+      "ddr_half_ps": 7500,
+      "phase_ps": 0,
+      "checks": 0,
+      "pass": true,
+      "log_sha256": "b356023cf5440b3b2356ab85b844cf72d452224caa3c2e852fc8a230d865e47e"
+    },
+    {
+      "mode": 3,
+      "ddr_half_ps": 7500,
+      "phase_ps": 0,
+      "checks": 80291,
+      "pass": true,
+      "log_sha256": "eb6cc1ab731dddc21b8ff90e422a6e75dbb0f1e2b53887eb052df7b1cc140423"
+    },
+    {
+      "mode": 4,
+      "ddr_half_ps": 7500,
+      "phase_ps": 0,
+      "checks": 40141,
+      "pass": true,
+      "log_sha256": "f77a54ecab995bb533da4c0fd4a848b7d6d9c6fd48f166242f451db2caa22820"
+    },
+    {
+      "mode": 0,
+      "ddr_half_ps": 6000,
+      "phase_ps": 500,
+      "checks": 55756,
+      "pass": true,
+      "log_sha256": "8dde2467a2235804fa757411a1af088e29390104e8e67549def5bec13638c997"
+    },
+    {
+      "mode": 0,
+      "ddr_half_ps": 6000,
+      "phase_ps": 3500,
+      "checks": 55758,
+      "pass": true,
+      "log_sha256": "c9f0d2d7f0a9600457dcc8b6fd4eb9578842d3e2fee625931d5cf5cbe8d88042"
+    },
+    {
+      "mode": 0,
+      "ddr_half_ps": 6000,
+      "phase_ps": 7250,
+      "checks": 55757,
+      "pass": true,
+      "log_sha256": "c46bd1e185b74bc35c4b7657eaaa3b32adcada399a041149f762c2e9368068f4"
+    },
+    {
+      "mode": 0,
+      "ddr_half_ps": 6000,
+      "phase_ps": 11250,
+      "checks": 55756,
+      "pass": true,
+      "log_sha256": "8dde2467a2235804fa757411a1af088e29390104e8e67549def5bec13638c997"
+    },
+    {
+      "mode": 0,
+      "ddr_half_ps": 12000,
+      "phase_ps": 500,
+      "checks": 26423,
+      "pass": true,
+      "log_sha256": "f43d7dce62d12c57d89f41dccbdef6e23864578d18718e434ef267abac9b2657"
+    },
+    {
+      "mode": 0,
+      "ddr_half_ps": 12000,
+      "phase_ps": 3500,
+      "checks": 26424,
+      "pass": true,
+      "log_sha256": "a5738d090443e122716675e55e8d96ac12264e74fe964016a0640aafff409277"
+    },
+    {
+      "mode": 0,
+      "ddr_half_ps": 12000,
+      "phase_ps": 7250,
+      "checks": 26422,
+      "pass": true,
+      "log_sha256": "c7ea38196ed16bf4916a5fa238a2d1b0981367a41d451d7c5c6fc243b8d9e830"
+    },
+    {
+      "mode": 0,
+      "ddr_half_ps": 12000,
+      "phase_ps": 11250,
+      "checks": 26423,
+      "pass": true,
+      "log_sha256": "f43d7dce62d12c57d89f41dccbdef6e23864578d18718e434ef267abac9b2657"
+    },
+    {
+      "mode": 1,
+      "ddr_half_ps": 6000,
+      "phase_ps": 500,
+      "checks": 45941,
+      "pass": true,
+      "log_sha256": "e5615983f160905b2401ba7b216e6cad21ba15291850c3a6689d5d07ad56e5d8"
+    },
+    {
+      "mode": 1,
+      "ddr_half_ps": 6000,
+      "phase_ps": 3500,
+      "checks": 45938,
+      "pass": true,
+      "log_sha256": "152b20aa2c9900ccae30de3dc624487f841b1b6ab57e8817fcd76533b8ef8870"
+    },
+    {
+      "mode": 1,
+      "ddr_half_ps": 6000,
+      "phase_ps": 7250,
+      "checks": 45940,
+      "pass": true,
+      "log_sha256": "0719b2a595f09c2c083b6e68a2da25eaa61c4fa4314203118ace0079647bf271"
+    },
+    {
+      "mode": 1,
+      "ddr_half_ps": 6000,
+      "phase_ps": 11250,
+      "checks": 45939,
+      "pass": true,
+      "log_sha256": "ce873677daa6d726c89ef458a6ae5ab33aafc90e6dbeb3974308d2321d2f7986"
+    },
+    {
+      "mode": 1,
+      "ddr_half_ps": 12000,
+      "phase_ps": 500,
+      "checks": 21754,
+      "pass": true,
+      "log_sha256": "4bbaf0528e7025ad54f32e6eee989d213ac08004b49b6d1e51dbc6aa19187735"
+    },
+    {
+      "mode": 1,
+      "ddr_half_ps": 12000,
+      "phase_ps": 3500,
+      "checks": 21752,
+      "pass": true,
+      "log_sha256": "15079def8f7b7990f1d73a934c482d223c86bb15f06d49abb158645ad149a563"
+    },
+    {
+      "mode": 1,
+      "ddr_half_ps": 12000,
+      "phase_ps": 7250,
+      "checks": 21754,
+      "pass": true,
+      "log_sha256": "4bbaf0528e7025ad54f32e6eee989d213ac08004b49b6d1e51dbc6aa19187735"
+    },
+    {
+      "mode": 1,
+      "ddr_half_ps": 12000,
+      "phase_ps": 11250,
+      "checks": 21752,
+      "pass": true,
+      "log_sha256": "15079def8f7b7990f1d73a934c482d223c86bb15f06d49abb158645ad149a563"
+    },
+    {
+      "mode": 4,
+      "ddr_half_ps": 6000,
+      "phase_ps": 500,
+      "checks": 50847,
+      "pass": true,
+      "log_sha256": "39d44e893912b215a24224280f27354f9b3f861b1a4d73c05b4d757db2a4acc9"
+    },
+    {
+      "mode": 4,
+      "ddr_half_ps": 6000,
+      "phase_ps": 3500,
+      "checks": 50848,
+      "pass": true,
+      "log_sha256": "1d9a16feacb4a35f612bbcddbfaff55ecbeaaac65394dd69887a0a0e327ec469"
+    },
+    {
+      "mode": 4,
+      "ddr_half_ps": 6000,
+      "phase_ps": 7250,
+      "checks": 50848,
+      "pass": true,
+      "log_sha256": "1d9a16feacb4a35f612bbcddbfaff55ecbeaaac65394dd69887a0a0e327ec469"
+    },
+    {
+      "mode": 4,
+      "ddr_half_ps": 6000,
+      "phase_ps": 11250,
+      "checks": 50846,
+      "pass": true,
+      "log_sha256": "50040cf511b48e323ffafc201f4e424e96d993e2c79737532bf87be0289493ba"
+    },
+    {
+      "mode": 4,
+      "ddr_half_ps": 12000,
+      "phase_ps": 500,
+      "checks": 24087,
+      "pass": true,
+      "log_sha256": "f84c1bb6946aac37ad6615846537b33c0e4ec64349651c8d71aed500682364c3"
+    },
+    {
+      "mode": 4,
+      "ddr_half_ps": 12000,
+      "phase_ps": 3500,
+      "checks": 24086,
+      "pass": true,
+      "log_sha256": "cebe13a23ab9b898036fe9de7549893ef5443574515ca47161a52cc235c66932"
+    },
+    {
+      "mode": 4,
+      "ddr_half_ps": 12000,
+      "phase_ps": 7250,
+      "checks": 24090,
+      "pass": true,
+      "log_sha256": "cb8cd8e995af3ad289926f5e568dfc5be677f16f97b96c28381e9ad5913384d7"
+    },
+    {
+      "mode": 4,
+      "ddr_half_ps": 12000,
+      "phase_ps": 11250,
+      "checks": 24085,
+      "pass": true,
+      "log_sha256": "7c264bac26a6cc356f7edfca6721541b24b300148d6a59a3956642fb29712bc2"
+    }
+  ],
+  "limits": "MODE2 intentionally drops two packed SOFs; ambiguous RAW provenance remains fail-closed until shared reset. No borrowing of latest RAW t0."
+}

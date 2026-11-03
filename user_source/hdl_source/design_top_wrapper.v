@@ -489,18 +489,22 @@ module design_top_wrapper (
 
     wire fusion_reset_n,wb_toggle,wb_locked;
     wire [7:0] controls_50,controls_camera,controls_hdmi;
+    wire [11:0] style_levels_50,style_levels_camera,style_levels_hdmi;
     wire osd_enable_50,osd_enable_hdmi;
     wire [5:0] color_control_50,color_control_hdmi;
     wire [12:0] color_gain_r,color_gain_b;
     wire [1:0] fusion_mode=controls_camera[7:5]==1 ? controls_camera[4:3]:2'd0;
     fusion_controls u_controls(.I_clk(I_sys_clk),.I_keys_n({I_key_mode,I_rst_n,I_button}),
         .I_switches(I_switches),.O_system_rst_n(fusion_reset_n),.O_control(controls_50),
-        .O_osd_enable(osd_enable_50),.O_wb_toggle(wb_toggle),.O_color_control(color_control_50));
-    fusion_control_cdc u_control_camera(.I_source_clk(I_sys_clk),.I_dest_clk(S_csi_rx_clk),
-        .I_rst_n(S_rst_n),.I_commit(S_raw_tuser),.I_data(controls_50),.O_data(controls_camera));
-    fusion_control_cdc #(.WIDTH(15)) u_control_hdmi(.I_source_clk(I_sys_clk),.I_dest_clk(S_hdmi_pixel_clk),
+        .O_osd_enable(osd_enable_50),.O_wb_toggle(wb_toggle),.O_color_control(color_control_50),
+        .O_style_levels(style_levels_50));
+    fusion_control_cdc #(.WIDTH(20)) u_control_camera(.I_source_clk(I_sys_clk),.I_dest_clk(S_csi_rx_clk),
+        .I_rst_n(S_rst_n),.I_commit(S_raw_tuser),
+        .I_data({style_levels_50,controls_50}),.O_data({style_levels_camera,controls_camera}));
+    fusion_control_cdc #(.WIDTH(27)) u_control_hdmi(.I_source_clk(I_sys_clk),.I_dest_clk(S_hdmi_pixel_clk),
         .I_rst_n(S_hdmi_rst_n),.I_commit(S_hdmi_user),
-        .I_data({color_control_50,osd_enable_50,controls_50}),.O_data({color_control_hdmi,osd_enable_hdmi,controls_hdmi}));
+        .I_data({style_levels_50,color_control_50,osd_enable_50,controls_50}),
+        .O_data({style_levels_hdmi,color_control_hdmi,osd_enable_hdmi,controls_hdmi}));
     (* ASYNC_REG="TRUE" *) reg [2:0] wb_toggle_sync;
     wire wb_relearn_pulse=wb_toggle_sync[2]!=wb_toggle_sync[1];
     always @(posedge S_csi_rx_clk or negedge S_rst_n) begin
@@ -682,7 +686,7 @@ assign S_raw_tuser  = S_axis_tuser;
 
 //ISP算法顶层模块
 isp_top u_isp_top (
-.I_wb_allow(wb_allow),.I_wb_relearn(wb_relearn | wb_relearn_pulse),.I_mode_req(fusion_mode),.O_wb_locked(wb_locked),
+.I_wb_allow(wb_allow),.I_wb_relearn(wb_relearn | wb_relearn_pulse),.I_mode_req(fusion_mode),.I_style_levels(style_levels_camera),.O_wb_locked(wb_locked),
 .O_color_gain_r(color_gain_r),.O_color_gain_b(color_gain_b),
 .O_meter_data(meter_rgb),.O_meter_valid(meter_valid),.O_meter_sof(meter_sof),
 .axi4s_video_aclk(S_csi_rx_clk),
@@ -701,6 +705,9 @@ isp_top u_isp_top (
   );
 
 
+    wire latency_write_start,latency_read_start,latency_input_overflow;
+    wire latency_read_fifo_reset,latency_output_underflow;
+    wire [1:0] latency_write_slot,latency_read_slot;
     video_in u_video_in(
         .I_rst_n              (  S_rst_n             ),
 
@@ -719,7 +726,9 @@ isp_top u_isp_top (
         .O_ddr_user_wr_en     ( S_vi_ddr_wr_en        ),
         .O_ddr_user_addr      ( S_vi_ddr_wr_addr      ),
         .O_ddr_user_wr_data   ( S_vi_ddr_wr_data      ),
-        .I_ddr_user_ready     ( S_ddr_user_ready      )
+        .I_ddr_user_ready     ( S_ddr_user_ready      ),
+        .O_observe_frame_start(latency_write_start),.O_observe_write_slot(latency_write_slot),
+        .O_observe_overflow(latency_input_overflow)
     );
 
 
@@ -753,7 +762,9 @@ isp_top u_isp_top (
         .I_dsi_clk           ( S_hdmi_pixel_clk     ),
         .I_video_vsync       ( S_video_out_vsync    ),
         .I_video_rd_en       ( S_hdmi_window_rd_en  ),
-        .O_vdieo_data        ( S_video_rd_data      )
+        .O_vdieo_data        ( S_video_rd_data      ),
+        .O_observe_read_start(latency_read_start),.O_observe_read_slot(latency_read_slot),
+        .O_observe_fifo_reset(latency_read_fifo_reset),.O_observe_underflow(latency_output_underflow)
     );
 
 
@@ -856,6 +867,41 @@ isp_top u_isp_top (
         if(!S_hdmi_rst_n)begin cfg_h<=0;ddr_h<=0;wb_h<=0;end
         else begin cfg_h<={cfg_h[0],S_cam_cfg_done};ddr_h<={ddr_h[0],S_init_calib_complete};wb_h<={wb_h[0],wb_locked};end
     end
+    wire [31:0] latency_us;
+    wire [15:0] latency_frame_id;
+    wire [15:0] latency_debug_reason;
+    wire latency_valid,latency_repeat,latency_skip;
+    wire [7:0] latency_status;
+    wire [19:0] latency_bcd;
+    reg [31:0] latency_hud_us;
+    reg [15:0] latency_hud_id,latency_hud_reason;
+    reg [2:0] latency_hud_flags;
+    reg [7:0] latency_hud_status;
+    // Freeze one complete HUD tuple for the scan, including late/invalid
+    // results. The shared BCD converter reads this snapshot later in the scan.
+    always @(posedge S_hdmi_pixel_clk or negedge S_hdmi_rst_n)begin
+        if(!S_hdmi_rst_n)begin latency_hud_us<=0;latency_hud_id<=0;latency_hud_reason<=0;latency_hud_flags<=0;latency_hud_status<=8'h80;end
+        else if(S_hdmi_user)begin
+            latency_hud_us<=latency_us;latency_hud_id<=latency_frame_id;
+            latency_hud_reason<=latency_debug_reason;
+            latency_hud_flags<={latency_valid,latency_repeat,latency_skip};
+            latency_hud_status<=latency_status;
+        end
+    end
+    frame_latency_monitor u_frame_latency(
+        .sys_clk(I_sys_clk),.cam_clk(S_csi_rx_clk),.ddr_clk(S_ddr_clk),.hdmi_clk(S_hdmi_pixel_clk),
+        .rst_n(S_rst_n && S_hdmi_rst_n),
+        .raw_user(S_raw_tuser),.raw_valid(S_raw_tvalid),.raw_error(S_lane_error_any),
+        .packed_user(S_ISP_O_tuser),.input_overflow(latency_input_overflow),
+        .write_start(latency_write_start),.write_slot(latency_write_slot),
+        .write_en(S_vi_ddr_wr_en),.write_address(S_vi_ddr_wr_addr),
+        .read_start(latency_read_start),.read_slot(latency_read_slot),
+        .read_en(S_vo_ddr_rd_en),.read_address(S_vo_ddr_rd_addr),
+        .read_return(S_ddr_user_rd_valid),.read_fifo_reset(latency_read_fifo_reset),
+        .raw_hdmi_vs(S_hdmi_vsync),.final_hdmi_vs(S_hdmi_out_vsync),
+        .final_hdmi_de(S_hdmi_out_de),.output_underflow(latency_output_underflow),
+        .O_latency_us(latency_us),.O_frame_id(latency_frame_id),
+        .O_valid(latency_valid),.O_repeat(latency_repeat),.O_skip(latency_skip),.O_status(latency_status),.O_debug_reason(latency_debug_reason));
     wire [15:0] xb,yb;
     wire [23:0] pb;
     wire [19:0] seconds_bcd,exposure_bcd;
@@ -864,12 +910,18 @@ isp_top u_isp_top (
     fusion_telemetry u_telemetry(.I_clk(S_hdmi_pixel_clk),.I_rst_n(S_hdmi_rst_n),.I_frame(S_hdmi_user),
         .I_source_clk(S_csi_rx_clk),.I_source_frame(S_csi_frame_start),.I_x(target_x),.I_y(target_y),
         .I_pixels(candidate_pixels),.I_exposure(isp_status[15:0]),.I_gain(isp_status[31:16]),
+        .I_latency_us(latency_hud_us),.O_latency_bcd(latency_bcd),
         .O_x_bcd(xb),.O_y_bcd(yb),.O_pixels_bcd(pb),.O_seconds_bcd(seconds_bcd),
         .O_exposure_bcd(exposure_bcd),.O_camera_fps_bcd(camera_fps_bcd),.O_output_fps_bcd(output_fps_bcd),.O_gain_bcd(gain_bcd));
     fusion_hud u_hud(.I_clk(S_hdmi_pixel_clk),.I_rst_n(S_hdmi_rst_n),.I_x(hud_x),.I_y(hud_y),
-        .I_control(controls_hdmi),.I_x_bcd(xb),.I_y_bcd(yb),.I_pixels_bcd(pb),
+        .I_control(controls_hdmi),.I_style_levels(style_levels_hdmi),.I_x_bcd(xb),.I_y_bcd(yb),.I_pixels_bcd(pb),
         .I_seconds_bcd(seconds_bcd),.I_exposure_bcd(exposure_bcd),.I_camera_fps_bcd(camera_fps_bcd),
-        .I_output_fps_bcd(output_fps_bcd),.I_gain_bcd(gain_bcd),.I_target(target),.I_alarm(alarm),
+        .I_output_fps_bcd(output_fps_bcd),.I_gain_bcd(gain_bcd),
+        .I_latency_bcd(latency_bcd),
+        .I_latency_frame_id((controls_hdmi[7:5]==3'd3 && controls_hdmi[4:3]==2'd2) ? latency_hud_reason : latency_hud_id),
+        .I_latency_valid(latency_hud_flags[2]),.I_latency_repeat(latency_hud_flags[1]),.I_latency_skip(latency_hud_flags[0]),
+        .I_latency_status(latency_hud_status),
+        .I_target(target),.I_alarm(alarm),
         .I_audio(controls_hdmi[7:5]==2 && controls_hdmi[4:3]==2 && !controls_hdmi[2] && source_ok && armed),
         .I_cam_cfg(cfg_h[1]),.I_ddr_ready(ddr_h[1]),.I_source_ok(source_ok),.I_wb_locked(wb_h[1]),
         .I_armed(armed),.I_debug(S_hdmi_debug_status),.I_color_control(color_control_hdmi),
@@ -935,6 +987,7 @@ isp_top u_isp_top (
     display_contrast u_display_contrast(.clk(S_hdmi_pixel_clk),.rst_n(S_hdmi_rst_n),
         .vs(denoise_vs),.hs(denoise_hs),.de(denoise_de),.rgb(denoise_rgb),
         .overlay(denoise_overlay),
+        .clear_level(denoise_control[7:5]==1 && denoise_control[4:3]==0 ? style_levels_hdmi[2:0] : 3'd2),
         .bypass(denoise_control[7:5]==1 && denoise_control[4]),
         .cartoon(denoise_control[7:5]==1 && denoise_control[4:3]==1),
         .keep_legacy(denoise_control[7:5]>=2),

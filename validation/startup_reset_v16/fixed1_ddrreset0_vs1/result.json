@@ -1,0 +1,17 @@
+{
+  "case": "fixed1_ddrreset0_vs1",
+  "returncode": 0,
+  "seconds": 1.193,
+  "source_sha256": {
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\video_out.v": "5aa815bef722e0e99d1e31b0c223421430b8db597d394fb3bb91f9d4079e7aa6",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\frame_latency_monitor.v": "55514b88411e3df3f0d6ce6de3806a534749bad138cd6a688c8065a45ee4ff39",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\fusion_controls.v": "5c9d6912c53ff44cdc4a2b334ea53d6adefdb20f551bb107e5b936b03a149aa9",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\ip_source\\w128_d512_fifo\\w128_d512_fifo.v": "5cd5f8e2216dd8989dc1e54d42b4da348dbb09f130bbe92deaa205db53a96bb4",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\ip_source\\w128_d512_fifo\\soft_fifo_al_4057d6b76aa6.v": "8218d772fba069f8c0c6333712c990b8417a447de7f3e73aff7cd342200ba751"
+  },
+  "sources_still_current": true,
+  "summary": [
+    "STARTUP_RESULT ddr_reset=          0 initial_vs=          1 expect_fail=          0 candidates=          4 mismatches=          0 valid_cycles=      11316 source=    1 valid=0",
+    "STARTUP_CASE_PASS"
+  ]
+}

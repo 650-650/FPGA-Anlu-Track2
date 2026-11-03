@@ -2,10 +2,15 @@
 // Inputs are row-major 3x3 B2 luminances / aligned first-scale Sobel magnitudes:
 // top-left [71:64], centre [39:32], bottom-right [7:0]. Pure combinational;
 // the style core registers its outputs in the existing C1 stage.
-module style_guide_v8(
+module style_guide_v8 #(
+ parameter EXTERNAL_GRADIENT=0
+)(
  input [71:0] I_y2,I_fine,
+ input [7:0] I_edge_threshold,
+ input I_edge_detail,
  output [7:0] O_mag,
- output O_edge,O_support
+ output O_edge,O_support,
+ input signed [10:0] I_gx,I_gy
 );
  wire [7:0] y[0:8];
  wire [7:0] m[0:8];
@@ -15,10 +20,17 @@ module style_guide_v8(
   assign m[k]=I_fine[71-8*k-:8];
  end endgenerate
 
- wire signed [10:0] gx=$signed({3'd0,y[2]})+$signed({2'd0,y[5],1'b0})+$signed({3'd0,y[8]})-
-     $signed({3'd0,y[0]})-$signed({2'd0,y[3],1'b0})-$signed({3'd0,y[6]});
- wire signed [10:0] gy=$signed({3'd0,y[6]})+$signed({2'd0,y[7],1'b0})+$signed({3'd0,y[8]})-
-     $signed({3'd0,y[0]})-$signed({2'd0,y[1],1'b0})-$signed({3'd0,y[2]});
+ wire signed [10:0] gx,gy;
+ generate if(EXTERNAL_GRADIENT!=0)begin: registered_gradient
+  assign gx=I_gx;
+  assign gy=I_gy;
+ end else begin: original_gradient
+  // Default behaviour and arithmetic remain the accepted combinational guide.
+  assign gx=$signed({3'd0,y[2]})+$signed({2'd0,y[5],1'b0})+$signed({3'd0,y[8]})-
+      $signed({3'd0,y[0]})-$signed({2'd0,y[3],1'b0})-$signed({3'd0,y[6]});
+  assign gy=$signed({3'd0,y[6]})+$signed({2'd0,y[7],1'b0})+$signed({3'd0,y[8]})-
+      $signed({3'd0,y[0]})-$signed({2'd0,y[1],1'b0})-$signed({3'd0,y[2]});
+ end endgenerate
  wire [10:0] ax=gx[10]?-gx:gx,ay=gy[10]?-gy:gy;
  wire [11:0] coarse_sum={1'b0,ax}+{1'b0,ay};
  wire [7:0] coarse=(|coarse_sum[11:8])?8'd255:coarse_sum[7:0];
@@ -68,6 +80,11 @@ module style_guide_v8(
  wire [7:0] fallback_limit=coarse_above_floor<center?coarse_above_floor:center;
  wire [7:0] faint_mag={2'd0,fallback_limit[7:2]};
  assign O_mag=trusted?(strict_line?center:mixed_mag):faint_mag;
- assign O_edge=trusted && (O_mag>=32 || (weak_edge && O_mag>=24));
+ wire [7:0] weak_threshold=I_edge_threshold>=8?I_edge_threshold-8'd8:8'd0;
+ wire binary_edge=trusted && (O_mag>=I_edge_threshold || (weak_edge && O_mag>=weak_threshold));
+ // Highest edge preset keeps coherent gradient shoulders as well as ridges.
+ // Scale agreement and tangent support still reject isolated fine spikes.
+ wire detail_edge=linked && scale_agrees && coarse>=8 && center>=8 && (coherent || coarse>=64);
+ assign O_edge=binary_edge || (I_edge_detail && detail_edge);
  assign O_support=trusted;
 endmodule

@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "returncode": 0,
+  "seconds": 5.013,
+  "scope": "Actual old/new MC FIFO and DDR wrapper RTL; only encrypted ddr2 is modeled.\n\nChecks real PAXI acceptance, independent AW/AR/W backpressure, exactly-once\naddress/data queues, old lost-read counterexample, common-ready cycle equality,\ndelayed calibration, and reset during a partially accepted write. Not a physical\nDDR/PHY or board acceptance test.\n",
+  "cases": [
+    "old_wrapper_loses_one_AR old_outstanding=1 new_outstanding=0 observed_idle_clocks=4096",
+    "AW_first_no_duplicate",
+    "W_first_no_duplicate",
+    "AR_independent_of_write_ready",
+    "common_ready_cycle_equivalence transactions=5000 compared_clocks=10052",
+    "delayed_calibration_queued_transactions=256",
+    "reset_clears_partial_AW_and_fifo",
+    "reset_clears_partial_W_and_fifo",
+    "random_independent_ready transactions=50000 commands=50000 writes=32353 reads=17647 stable_checks=89131"
+  ],
+  "source_sha256": {
+    "tools/ddr_handshake_tb.sv": "5b6a3376e61dbf68d8bbbf883e7c1ca2210b067bfffd226a095cdb3237868aaa",
+    "tools/ddr2_handshake_stub.sv": "db949959c2e9b8a62e0fd999353d82a03c2593cbe8d81a944e2972f28519a951",
+    "user_source/hdl_source/mc_to_user_interface.v": "0aa6f8cc56cd1f52f0f2554635c246db91c136ba37833023cb084704d9a7de9b",
+    "user_source/hdl_source/ph1p35_ddr/ph1p35_324_ddr_wrapper.v": "5cbc031b67d5101ea3677ab47e688a69a36116bfc6c1d5e6fb683bee0f91a35c",
+    "user_source/ip_source/w155_d512_fifo/w155_d512_fifo.v": "d600bcd8e876691d6cf3a512650e7e69118fc8016e9fdf892ac85e4c63851e37",
+    "user_source/ip_source/w155_d512_fifo/soft_fifo_al_f58e8b3e1f3d.v": "198ca29ada4051f0037af040848e416f2b2be6b40e513dd65c531ec557fef424",
+    "validation/ddr_handshake/legacy_mc_to_user_interface.v": "6345b6df815f209efd44260f7b7eb3a370cde9a02ff6a945b59bf4f2bf5c1b02",
+    "validation/ddr_handshake/legacy_ph1p35_324_ddr_wrapper.v": "9cee22a864fac46022e128af63d2c628a17e1428aa2c9e43a6889a6695f51c69"
+  },
+  "sources_still_current": true,
+  "original_v14_sha256": {
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v14_latency_provenance\\user_source\\hdl_source\\mc_to_user_interface.v": "7d00f0058467a0f99e0e2d36fa360d59579b4b73be7fb33b16274fc6b422f438",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v14_latency_provenance\\user_source\\hdl_source\\ph1p35_ddr\\ph1p35_324_ddr_wrapper.v": "cda144da5e22b0593ec5ee4783b1c3ca2621fd53b62fcbeef5a65651b1203925"
+  },
+  "original_v14_unchanged": true,
+  "verifier_sha256": "9bbbdfc55cf26fdd22f3f4ca4a7c57e68084288b8765ff6d735463cdf7a756da",
+  "compile_command": [
+    "iverilog",
+    "-g2012",
+    "-s",
+    "handshake_tb",
+    "-o",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\validation\\ddr_handshake\\sim.vvp",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\tools\\ddr_handshake_tb.sv",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\tools\\ddr2_handshake_stub.sv",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\mc_to_user_interface.v",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\hdl_source\\ph1p35_ddr\\ph1p35_324_ddr_wrapper.v",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\ip_source\\w155_d512_fifo\\w155_d512_fifo.v",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\user_source\\ip_source\\w155_d512_fifo\\soft_fifo_al_f58e8b3e1f3d.v",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\validation\\ddr_handshake\\legacy_mc_to_user_interface.v",
+    "D:\\FPGA_Work\\AnlogicCup2026\\07_stylize_flame_fusion_v16_scene_levels_latency\\validation\\ddr_handshake\\legacy_ph1p35_324_ddr_wrapper.v"
+  ],
+  "simulation_clock_period_ns": 15
+}
